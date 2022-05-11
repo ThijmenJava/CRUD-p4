@@ -1,13 +1,21 @@
+const slideShow = document.querySelector("#slideshow");
 var i = 0;
 var images = [];
-var slideTime = 3000; // 3 seconds
+var slideTime = 4000; // 3 seconds
 
-images[0] = "https://via.placeholder.com/150/300AAA";
-images[1] = "https://via.placeholder.com/150/000300";
-images[2] = "https://via.placeholder.com/150/AAA300";
+images[0] = "img/vacation.jpeg";
+images[1] = "img/vacation2.jpeg";
+images[2] = "img/vacation3.jpg";
+images[3] = "img/vacation4.jpeg";
+images[4] = "img/vacation6.jpeg";
+images[5] = "img/vacation7.jpeg";
+images[6] = "img/vacation8.jpeg";
+images[7] = "img/vacation9.jpeg";
+images[8] = "img/vacation10.jpeg";
+images[9] = "img/vacation11.jpeg";
 
 function changePicture() {
-  document.body.style.backgroundImage = "url(" + images[i] + ")";
+  slideShow.style.backgroundImage = "url(" + images[i] + ")";
 
   if (i < images.length - 1) {
     i++;

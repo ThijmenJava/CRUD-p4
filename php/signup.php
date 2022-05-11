@@ -20,7 +20,7 @@ if (isset($_POST["submitr"])) {
         $stmt->bindParam(":email", $email);
         $stmt->execute();
 
-        redirect("../admin/users.php");
+        redirect("../admin/adminhome.php");
     }
 }
 

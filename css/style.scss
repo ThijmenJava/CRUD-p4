@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Pacifico", cursive;
+  color: #ffb72b;
+}
+header {
+  border-bottom: solid 4px #9fb4ff;
+}
+.header-logo {
+  background-image: url(../img/planelogo.png);
+  width: 300px;
+  height: 100px;
+  background-size: cover;
+}
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  justify-content: center;
+}
+nav ul li {
+  list-style-type: none;
+}
+nav ul li a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  margin: 2px;
+  font-size: 20px;
+  border-radius: 8px;
+  width: auto;
+  height: auto;
+  padding: 8px;
+  position: relative;
+  border: none;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  cursor: pointer;
+}

@@ -15,7 +15,7 @@
     <input type="submit" name="submit">
 </form>
 
-<form action="php/login.php" method="post">
+<form action="php/signup.php" method="post">
     <input type="text" name="emailr">
     <input type="text" name="naamr">
     <input type="text" name="wachtwoordr">

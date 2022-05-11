@@ -6,12 +6,11 @@ include("../includes/util.php");
 global $conn;
 
 if (isset($_POST["submit"])) {
-    $email = $_POST["email"];
     $naam = $_POST["naam"];
     $wachtwoord = $_POST["wachtwoord"];
 
     var_dump($_POST);
-    if (empty($email) || empty($naam) || empty($wachtwoord)) {
+    if (empty($naam) || empty($wachtwoord)) {
         $error = "You need to fill all forms!";
         redirect("../test.php");
     } else {
@@ -21,7 +20,7 @@ if (isset($_POST["submit"])) {
         $stmt->bindParam(":wachtwoord", $wachtwoord);
         $stmt->execute();
         if ($stmt->rowCount() == 1) {
-            redirect("../adminhome.php");
+            redirect("../admin/adminhome.php");
         } else {
             redirect("../test.php");
         }

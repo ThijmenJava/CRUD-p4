@@ -13,8 +13,6 @@
 </head>
     <body>
 
-        <div class="slideShow" id="slideshow"></div>
-
         <?php include("includes/header.php") ?>
 
         <section class="main_section">

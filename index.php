@@ -9,6 +9,7 @@
     <title>Document</title>
 </head>
     <body>
+        <?php include("includes/header/header.php") ?>
         <div class="slideShow" id="slideshow"></div>
     </body>
 <script src="js/home.js"></script>

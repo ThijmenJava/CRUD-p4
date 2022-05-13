@@ -2,10 +2,8 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Pacifico", cursive;
-  color: #ffb72b;
+  color: #2f86a6;
 }
-
-$footer-font: font-family "Radio Canada", sans-serif;
 
 @mixin center {
   display: flex;
@@ -13,44 +11,63 @@ $footer-font: font-family "Radio Canada", sans-serif;
   align-items: center;
 }
 
-header {
-  border-bottom: solid 4px #9fb4ff;
-}
+$footer-font: font-family "Radio Canada", sans-serif;
+$first-font: font-family "Pacifico", cursive;
+
+$first-color: #f7f7f7;
+$second-color: #9fb4ff;
+$third-color: #ffb72b;
+$fourth-color: #99ffcd;
+$fifth-color: #ffe61b;
+
 .header-logo {
   background-image: url(../img/planelogo.png);
-  width: 300px;
-  height: 100px;
+  width: 225px;
+  height: 75px;
   background-size: cover;
 }
-nav {
+header {
+  border-bottom: $fifth-color solid 4px;
+  nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      justify-content: center;
+      li {
+        list-style-type: none;
+        a {
+          text-decoration: none;
+          letter-spacing: 1px;
+          margin: 2px;
+          font-size: 20px;
+          border-radius: 8px;
+          width: auto;
+          height: auto;
+          padding: 8px;
+          position: relative;
+          border: none;
+          text-align: center;
+          transition-duration: 0.4s;
+          overflow: hidden;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.header-ul-right {
+  padding-left: 950px;
   display: flex;
-  width: 100%;
-  align-items: center;
-  padding: 10px;
-}
-nav ul {
-  display: flex;
-  justify-content: space-around;
-  justify-content: center;
-}
-nav ul li {
-  list-style-type: none;
-}
-nav ul li a {
-  text-decoration: none;
-  letter-spacing: 1px;
-  margin: 2px;
-  font-size: 20px;
-  border-radius: 8px;
-  width: auto;
-  height: auto;
-  padding: 8px;
-  position: relative;
-  border: none;
-  text-align: center;
-  transition-duration: 0.4s;
-  overflow: hidden;
-  cursor: pointer;
+  justify-content: right;
+  align-items: right;
+  flex-direction: right;
 }
 
 .main_section {

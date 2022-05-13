@@ -12,6 +12,9 @@
     <title>Home</title>
 </head>
     <body>
+
+        <div class="slideShow" id="slideshow"></div>
+
         <?php include("includes/header.php") ?>
 
         <section class="main_section">
@@ -31,7 +34,6 @@
         </section>
 
         <?php include("includes/footer.php"); ?>
-
     </body>
 <script src="js/home.js"></script>
 </html>

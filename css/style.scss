@@ -1,8 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Pacifico", cursive;
-  color: #2f86a6;
+  font-family: font-family "Titillium Web", sans-serif;
 }
 
 @mixin center {
@@ -11,23 +10,35 @@
   align-items: center;
 }
 
+$first-font: font-family "Raleway", sans-serif;
+$header-font: font-family "Titillium Web", sans-serif;
 $footer-font: font-family "Radio Canada", sans-serif;
-$first-font: font-family "Pacifico", cursive;
 
 $first-color: #f7f7f7;
 $second-color: #9fb4ff;
 $third-color: #ffb72b;
 $fourth-color: #99ffcd;
 $fifth-color: #ffe61b;
+$sixth-color: #2f86a6;
+$seventh-color: black;
 
 .header-logo {
   background-image: url(../img/planelogo.png);
   width: 225px;
   height: 75px;
   background-size: cover;
+  padding: 0px;
 }
+
+.ttt {
+  font-size: 39px;
+  padding-left: 30px;
+  color: $sixth-color;
+}
+
 header {
-  border-bottom: $fifth-color solid 4px;
+  font-family: $header-font !important;
+  border-bottom: $fifth-color solid 6px;
   nav {
     display: flex;
     width: 100%;
@@ -35,86 +46,133 @@ header {
     padding: 10px;
     padding-left: 25px;
     padding-right: 25px;
+    color: rgb(63, 63, 63);
     ul {
-      display: flex;
-      justify-content: space-around;
-      justify-content: center;
+      @include center();
       li {
         list-style-type: none;
+        padding-left: 25px;
+        padding-right: 25px;
         a {
           text-decoration: none;
           letter-spacing: 1px;
           margin: 2px;
-          font-size: 20px;
-          border-radius: 8px;
-          width: auto;
-          height: auto;
+          font-size: 22px;
+          width: 175px;
+          height: 50px;
           padding: 8px;
           position: relative;
           border: none;
           text-align: center;
-          transition-duration: 0.4s;
+          transition-duration: 0.15s;
           overflow: hidden;
           cursor: pointer;
+
+          &:hover {
+            // background-color: $sixth-color;
+            padding-bottom: 3px;
+            border-bottom: #2f86a6 solid 2px;
+          }
+          &:active {
+            color: rgb(213, 213, 213);
+          }
         }
       }
     }
   }
 }
+@media only screen and (max-width: 600px) {
+  header {
+    background-color: lightblue;
+  }
+}
+
+.header-ul-left {
+  @include center();
+}
 
 .header-ul-right {
-  padding-left: 950px;
+  width: 200px;
+  height: auto;
   display: flex;
   justify-content: right;
   align-items: right;
   flex-direction: right;
+  flex: 1;
+}
+
+.inlog-logo {
+  width: 35px;
+  @include center();
 }
 
 .main_section {
   height: auto;
   width: 100%;
+  .main_content {
+    height: auto;
+    width: 100%;
+    .slideShow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("../img/vacation11.jpeg");
+      background-size: cover;
+      box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      height: 100vh;
+      .zoekblak {
+        width: 400px;
+        height: 500px;
+        background-color: $first-color;
+        border-radius: 40px;
+        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.07);
+      }
+    }
+  }
 }
 
-.main_content {
-  height: auto;
-  width: 100%;
-}
-
-.slideShow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../img/vacation11.jpeg");
+.inlogformulier {
+  @include center();
+  background-image: url(../img/vacationinlog.jpeg);
   background-size: cover;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
   width: 100%;
-  height: 100vh;
-}
-
-.zoekblak {
-  width: 400px;
-  height: 500px;
-  background-color: #f7f7f7;
-  border-radius: 40px;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.07);
+  height: 800px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: $first-color;
+  .inlogform {
+    align-items: left;
+    border-radius: 25px;
+    font-size: 35px;
+    .inloggen {
+      font-size: 75px;
+      width: 100%;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .inloginput {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .sectionfooter {
+  font-family: $footer-font !important;
   width: 100%;
   height: auto;
-
   .footer {
     display: flex;
     width: 100%;
     height: 45px;
-    border-top: #ffe61b solid 4px;
-
+    border-top: #ffe61b solid 6px;
     .copyright {
       width: 50%;
       height: auto;
       @include center();
     }
-
     .socialmedia {
       width: 50%;
       height: auto;

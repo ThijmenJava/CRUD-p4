@@ -20,7 +20,7 @@
 }
 
 header {
-  font-family: font-family "Titillium Web", sans-serif !important;
+  font-family: font-family "Titillium Web", sans-serif;
   border-bottom: #ffe61b solid 6px;
 }
 
@@ -218,7 +218,7 @@ header nav ul li a:active {
 }
 
 .sectionfooter {
-  font-family: font-family "Radio Canada", sans-serif !important;
+  font-family: font-family "Radio Canada", sans-serif;
   width: 100%;
   height: auto;
 }

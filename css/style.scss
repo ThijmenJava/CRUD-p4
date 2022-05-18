@@ -37,7 +37,7 @@ $seventh-color: black;
 }
 
 header {
-  font-family: $header-font !important;
+  font-family: $header-font;
   border-bottom: $fifth-color solid 6px;
   nav {
     display: flex;
@@ -160,7 +160,7 @@ header {
 }
 
 .sectionfooter {
-  font-family: $footer-font !important;
+  font-family: $footer-font;
   width: 100%;
   height: auto;
   .footer {

@@ -1,8 +1,9 @@
 * {
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Pacifico", cursive;
-  color: #2f86a6;
+  color: black;
 }
 
 .header-logo {
@@ -15,22 +16,35 @@
 header {
   border-bottom: #ffe61b solid 4px;
 }
+
 header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px;
   padding-left: 25px;
   padding-right: 25px;
 }
+
 header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 header nav ul li {
   list-style-type: none;
 }
+
 header nav ul li a {
   text-decoration: none;
   letter-spacing: 1px;
@@ -43,17 +57,31 @@ header nav ul li a {
   position: relative;
   border: none;
   text-align: center;
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
   overflow: hidden;
   cursor: pointer;
 }
 
 .header-ul-right {
-  padding-left: 950px;
+  width: 200px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: right;
-  align-items: right;
-  flex-direction: right;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: right;
+          flex-direction: right;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .main_section {
@@ -67,48 +95,172 @@ header nav ul li a {
 }
 
 .slideShow {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-image: url("../img/vacation11.jpeg");
   background-size: cover;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100vh;
-}
-
-.zoekblak {
-  width: 400px;
-  height: 500px;
-  background-color: #f7f7f7;
-  border-radius: 40px;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.07);
 }
 
 .sectionfooter {
   width: 100%;
   height: auto;
 }
+
 .sectionfooter .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 45px;
   border-top: #ffe61b solid 4px;
 }
+
 .sectionfooter .footer .copyright {
   width: 50%;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
+.sectionfooter .footer .copyright p {
+  color: black;
+  font-family: "Radio Canada", sans-serif;
+}
+
 .sectionfooter .footer .socialmedia {
   width: 50%;
   height: auto;
-  background-color: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
+.zoekblak {
+  width: 800px;
+  height: 300px;
+  background-color: #f7f7f7;
+  border-radius: 40px;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.6);
+          box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.6);
+}
+
+.zoekblak .zoek-titel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 60px;
+}
+
+.zoekblak .zoek-titel h2 {
+  color: black;
+  font-family: "Radio Canada", sans-serif;
+  font-size: 35px;
+}
+
+.zoekblak .plek-form {
+  height: 240px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.zoekblak .plek-form .container-labels {
+  height: 30px;
+  width: 100%;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.zoekblak .plek-form .container-labels .labels-plek {
+  height: 100%;
+  width: 50%;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.zoekblak .plek-form .container-labels .labels-plek h3 {
+  height: 35px;
+  width: 90px;
+  background-color: #ffb72b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+  color: black;
+  font-family: "Radio Canada", sans-serif;
+}
+
+.zoekblak .plek-form .container-input {
+  height: 70px;
+  width: 100%;
+  background-color: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.zoekblak .plek-form .container-input .input-plek {
+  height: 70px;
+  width: 50%;
+  background-color: chartreuse;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.zoekblak .plek-form .container-input .input-plek .input {
+  border: none;
+  background: none;
+  width: 80%;
+  height: 50px;
+}
 /*# sourceMappingURL=style.css.map */

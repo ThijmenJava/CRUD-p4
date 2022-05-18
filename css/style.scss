@@ -2,13 +2,29 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Pacifico", cursive;
-  color: #2f86a6;
+  color: black;
 }
 
 @mixin center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin center_high {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin block($height, $witdh, $color) {
+  height: $height;
+  width: $witdh;
+  background-color: $color;
+}
+
+@mixin remove_input_style {
+  border: none;
+  background: none;
 }
 
 $footer-font: font-family "Radio Canada", sans-serif;
@@ -63,11 +79,13 @@ header {
 }
 
 .header-ul-right {
-  padding-left: 950px;
+  width: 200px;
+  height: auto;
   display: flex;
   justify-content: right;
   align-items: right;
   flex-direction: right;
+  flex: 1;
 }
 
 .main_section {
@@ -91,14 +109,6 @@ header {
   height: 100vh;
 }
 
-.zoekblak {
-  width: 400px;
-  height: 500px;
-  background-color: #f7f7f7;
-  border-radius: 40px;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.07);
-}
-
 .sectionfooter {
   width: 100%;
   height: auto;
@@ -113,13 +123,75 @@ header {
       width: 50%;
       height: auto;
       @include center();
+
+      p {
+        color: black;
+        font-family: "Radio Canada", sans-serif;
+      }
     }
 
     .socialmedia {
       width: 50%;
       height: auto;
-      background-color: blue;
       @include center();
+    }
+  }
+}
+
+.zoekblak {
+  width: 800px;
+  height: 300px;
+  background-color: #f7f7f7;
+  border-radius: 40px;
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.6);
+
+  .zoek-titel {
+    @include center();
+    width: 100%;
+    height: 60px;
+
+    h2 {
+      color: black;
+      font-family: "Radio Canada", sans-serif;
+      font-size: 35px;
+    }
+  }
+
+  .plek-form {
+    @include block(240px, 100%, transparent);
+
+    .container-labels {
+      @include block(30px, 100%, transparent);
+      display: flex;
+
+      .labels-plek {
+        @include block(100%, 50%, transparent);
+        @include center();
+
+        h3 {
+          @include block(35px, 90px, $third-color);
+          @include center();
+          font-size: 25px;
+          color: black;
+          font-family: "Radio Canada", sans-serif;
+        }
+      }
+    }
+
+    .container-input {
+      @include block(70px, 100%, blue);
+      display: flex;
+
+      .input-plek {
+        @include block(70px, 50%, chartreuse);
+        @include center_high();
+
+        .input {
+          @include remove_input_style();
+          width: 80%;
+          height: 50px;
+        }
+      }
     }
   }
 }

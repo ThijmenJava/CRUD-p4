@@ -24,14 +24,37 @@
         <section class="main_section">
             <main class="main_content">
                 <div class="slideShow" id="slideshow">
-                    <div class="red">
-
-                    </div>
                     <div class="zoekblak">
+                        <div class="zoek-titel">
+                            <h2>Zoek vlucht</h2>
+                        </div>
+                        <form class="plek-form" action="" method="post">
+                            <div class="container-labels">
+                                <div class="labels-plek">
+                                    <h3>Vanaf</h3>
+                                </div>
+                                <div class="labels-plek">
+                                    <h3>Naar</h3>
+                                </div>
+                            </div>
+                            <div class="container-input">
+                                <div class="input-plek">
+                                    <input class="input" type="text">
+                                </div>
+                                <div class="input-plek">
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div>
 
-                    </div>
-                    <div class="blauw">
+                            </div>
+                            <div>
 
+                            </div>
+                            <div>
+
+                            </div>
+                        </form>
                     </div>
                 </div>                
             </main>

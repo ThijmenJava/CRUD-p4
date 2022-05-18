@@ -1,7 +1,7 @@
 <section class="sectionfooter">
     <div class="footer">
         <div class="copyright">
-            <p>TTT Time To Travel</p>
+            <p class="copyright-font">© 2022 TTT Time To Travel (Thijmen, Thijs)</p>
         </div>
         <div class="socialmedia">
             <p>sadbvastucdyas</p>

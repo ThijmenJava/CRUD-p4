@@ -2,6 +2,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: black;
   font-family: font-family "Titillium Web", sans-serif;
 }
 
@@ -21,7 +22,7 @@
 
 header {
   font-family: font-family "Titillium Web", sans-serif;
-  border-bottom: #ffe61b solid 6px;
+  border-bottom: #ffe61b solid 3px;
 }
 
 header nav {
@@ -144,7 +145,6 @@ header nav ul li a:active {
   width: 100%;
 }
 
-
 .main_section .main_content .slideShow {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,8 +164,6 @@ header nav ul li a:active {
 }
 
 .main_section .main_content .slideShow .zoekblak {
-  width: 400px;
-  height: 500px;
   background-color: #f7f7f7;
   border-radius: 40px;
   -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.07);
@@ -230,7 +228,7 @@ header nav ul li a:active {
   display: flex;
   width: 100%;
   height: 45px;
-  border-top: #ffe61b solid 6px;
+  border-top: #ffe61b solid 3px;
 }
 
 .sectionfooter .footer .copyright {
@@ -267,15 +265,16 @@ header nav ul li a:active {
 }
 
 .zoekblak {
-  width: 800px;
+  width: 900px;
   height: 300px;
   background-color: #f7f7f7;
   border-radius: 40px;
-  -webkit-box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.6);
-          box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.6);
 }
 
 .zoekblak .zoek-titel {
+  height: 60px;
+  width: 100%;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -285,8 +284,6 @@ header nav ul li a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 60px;
 }
 
 .zoekblak .zoek-titel h2 {
@@ -344,18 +341,20 @@ header nav ul li a:active {
 }
 
 .zoekblak .plek-form .container-input {
-  height: 70px;
+  height: auto;
   width: 100%;
-  background-color: blue;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .zoekblak .plek-form .container-input .input-plek {
-  height: 70px;
+  height: auto;
   width: 50%;
-  background-color: chartreuse;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -364,16 +363,67 @@ header nav ul li a:active {
           justify-content: center;
 }
 
-.zoekblak .plek-form .container-input .input-plek .input {
-  border: none;
-  background: none;
-  width: 80%;
+.zoekblak .plek-form .container-input .input-plek .black {
   height: 50px;
+  width: 50px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #ffb72b;
+}
+
+.zoekblak .plek-form .container-input .input-plek .black .vliegtuig-img {
+  width: 90%;
+  height: 90%;
+}
+
+.zoekblak .plek-form .container-input .input-plek .black .calander-size {
+  font-size: 35px;
+}
+
+.zoekblak .plek-form .container-input .input-plek .input {
+  border: none;
+  background: none;
+  width: 70%;
+  height: 50px;
+  border-color: #ffb72b;
+  border: 3.3px solid #ffb72b;
+}
+
+.border-right {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.border-left {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.img-border-right {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.img-border-left {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.rotate {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.margin {
+  margin-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */

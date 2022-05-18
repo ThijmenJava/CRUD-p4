@@ -55,7 +55,7 @@ $seventh-color: black;
 
 header {
   font-family: $header-font;
-  border-bottom: $fifth-color solid 6px;
+  border-bottom: $fifth-color solid 3px;
   nav {
     display: flex;
     width: 100%;
@@ -139,8 +139,6 @@ header {
       width: 100%;
       height: 100vh;
       .zoekblak {
-        width: 400px;
-        height: 500px;
         background-color: $first-color;
         border-radius: 40px;
         box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.07);
@@ -184,7 +182,7 @@ header {
     display: flex;
     width: 100%;
     height: 45px;
-    border-top: #ffe61b solid 6px;
+    border-top: #ffe61b solid 3px;
     .copyright {
       width: 50%;
       height: auto;
@@ -204,16 +202,14 @@ header {
 }
 
 .zoekblak {
-  width: 800px;
+  width: 900px;
   height: 300px;
   background-color: #f7f7f7;
   border-radius: 40px;
-  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.6);
 
   .zoek-titel {
+    @include block(60px, 100%, transparent);
     @include center();
-    width: 100%;
-    height: 60px;
 
     h2 {
       color: black;
@@ -244,19 +240,66 @@ header {
     }
 
     .container-input {
-      @include block(70px, 100%, blue);
+      @include block(auto, 100%, transparent);
       display: flex;
+      flex-wrap: wrap;
 
       .input-plek {
-        @include block(70px, 50%, chartreuse);
+        @include block(auto, 50%, transparent);
         @include center_high();
+
+        .black {
+          @include block(50px, 50px, transparent);
+          @include center();
+          background-color: $third-color;
+
+          .vliegtuig-img {
+            width: 90%;
+            height: 90%;
+          }
+
+          .calander-size {
+            font-size: 35px;
+          }
+        }
 
         .input {
           @include remove_input_style();
-          width: 80%;
+          width: 70%;
           height: 50px;
+          border-color: $third-color;
+          border: 3.3px solid $third-color;
         }
       }
     }
   }
+}
+
+.border-right {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.border-left {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.img-border-right {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.img-border-left {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.margin {
+  margin-top: 10px;
 }

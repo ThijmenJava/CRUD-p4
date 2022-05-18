@@ -9,10 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Titillium+Web:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <?php include_once('includes/header.php'); ?>
-
   <body class="">
     <div class="inlogformulier">
       <form class="inlogform" action="php/inloggen.php" method="post">
@@ -51,3 +51,5 @@
 <script src="JS/main.js"></script>
 
 <?php include_once('includes/footer.php'); ?>
+</body>
+</html>

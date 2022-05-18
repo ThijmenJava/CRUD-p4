@@ -2,9 +2,9 @@
     <nav>
         <div class="header-logo"></div>
         <div class="ttt">Time To Travel
-            <style>
-                @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,300&display=swap');
-            </style>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+        </style>
         </div>
         <ul class="header-ul-left">
             <li><a href="index.php">Home</a></li>

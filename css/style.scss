@@ -2,7 +2,7 @@
   margin: 0;
   box-sizing: border-box;
   color: black;
-  font-family: font-family "Titillium Web", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 @mixin center {
@@ -27,10 +27,6 @@
   background: none;
 }
 
-$first-font: font-family "Raleway", sans-serif;
-$header-font: font-family "Titillium Web", sans-serif;
-$footer-font: font-family "Radio Canada", sans-serif;
-
 $first-color: #f7f7f7;
 $second-color: #9fb4ff;
 $third-color: #ffb72b;
@@ -54,8 +50,8 @@ $seventh-color: black;
 }
 
 header {
-  font-family: $header-font;
-  border-bottom: $fifth-color solid 3px;
+  font-family: "Titillium Web", sans-serif;
+  border-bottom: $fifth-color solid 6px;
   nav {
     display: flex;
     width: 100%;
@@ -84,9 +80,7 @@ header {
           transition-duration: 0.15s;
           overflow: hidden;
           cursor: pointer;
-
           &:hover {
-            // background-color: $sixth-color;
             padding-bottom: 3px;
             border-bottom: #2f86a6 solid 2px;
           }
@@ -147,7 +141,17 @@ header {
   }
 }
 
+.contact-page {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  .contact-title {
+    @include center();
+    font-family: "Roboto", sans-serif;
+  }
+}
+
 .inlogformulier {
+  font-family: "Roboto", sans-serif;
   @include center();
   background-image: url(../img/vacationinlog.jpeg);
   background-size: cover;
@@ -174,43 +178,14 @@ header {
   }
 }
 
-.sectionfooter {
-  font-family: $footer-font;
-  width: 100%;
-  height: auto;
-  .footer {
-    display: flex;
-    width: 100%;
-    height: 45px;
-    border-top: #ffe61b solid 3px;
-    .copyright {
-      width: 50%;
-      height: auto;
-      @include center();
-
-      p {
-        color: black;
-        font-family: "Radio Canada", sans-serif;
-      }
-    }
-    .socialmedia {
-      width: 50%;
-      height: auto;
-      @include center();
-    }
-  }
-}
-
 .zoekblak {
   width: 900px;
   height: 300px;
   background-color: #f7f7f7;
   border-radius: 40px;
-
   .zoek-titel {
     @include block(60px, 100%, transparent);
     @include center();
-
     h2 {
       color: black;
       font-family: "Radio Canada", sans-serif;
@@ -220,15 +195,12 @@ header {
 
   .plek-form {
     @include block(240px, 100%, transparent);
-
     .container-labels {
       @include block(30px, 100%, transparent);
       display: flex;
-
       .labels-plek {
         @include block(100%, 50%, transparent);
         @include center();
-
         h3 {
           @include block(35px, 90px, $third-color);
           @include center();
@@ -243,11 +215,9 @@ header {
       @include block(auto, 100%, transparent);
       display: flex;
       flex-wrap: wrap;
-
       .input-plek {
         @include block(auto, 50%, transparent);
         @include center_high();
-
         .black {
           @include block(50px, 50px, transparent);
           @include center();
@@ -262,7 +232,6 @@ header {
             font-size: 35px;
           }
         }
-
         .input {
           @include remove_input_style();
           width: 70%;
@@ -275,6 +244,41 @@ header {
   }
 }
 
+.sectionfooter {
+  font-family: "Radio Canada", sans-serif;
+  width: 100%;
+  height: auto;
+  .footer {
+    display: flex;
+    width: 100%;
+    height: 75px;
+    border-top: #ffe61b solid 6px;
+    .copyright {
+      width: 50%;
+      height: auto;
+      @include center();
+      p {
+        color: black;
+        font-family: "Radio Canada", sans-serif;
+      }
+    }
+    .socialmedia {
+      width: 50%;
+      height: auto;
+      @include center();
+      .socialmedia-logo {
+        width: 35px;
+        height: 35px;
+        margin-left: 10px;
+        margin-right: 10px;
+        .logo-button {
+          border: none;
+          background-color: none;
+        }
+      }
+    }
+  }
+  
 .border-right {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;

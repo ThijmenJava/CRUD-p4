@@ -3,7 +3,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: black;
-  font-family: font-family "Titillium Web", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .header-logo {
@@ -21,8 +21,8 @@
 }
 
 header {
-  font-family: font-family "Titillium Web", sans-serif;
-  border-bottom: #ffe61b solid 3px;
+  font-family: "Titillium Web", sans-serif;
+  border-bottom: #ffe61b solid 6px;
 }
 
 header nav {
@@ -170,7 +170,26 @@ header nav ul li a:active {
           box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.07);
 }
 
+.contact-page {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.contact-page .contact-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
 .inlogformulier {
+  font-family: "Roboto", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,54 +233,6 @@ header nav ul li a:active {
 
 .inlogformulier .inlogform .inloggen .inloginput {
   width: 100%;
-}
-
-.sectionfooter {
-  font-family: font-family "Radio Canada", sans-serif;
-  width: 100%;
-  height: auto;
-}
-
-.sectionfooter .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 45px;
-  border-top: #ffe61b solid 3px;
-}
-
-.sectionfooter .footer .copyright {
-  width: 50%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.sectionfooter .footer .copyright p {
-  color: black;
-  font-family: "Radio Canada", sans-serif;
-}
-
-.sectionfooter .footer .socialmedia {
-  width: 50%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .zoekblak {
@@ -365,8 +336,26 @@ header nav ul li a:active {
 
 .zoekblak .plek-form .container-input .input-plek .black {
   height: 50px;
-  width: 50px;
-  background-color: transparent;
+}
+
+.sectionfooter {
+  font-family: "Radio Canada", sans-serif;
+  width: 100%;
+  height: auto;
+}
+
+.sectionfooter .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 75px;
+  border-top: #ffe61b solid 6px;
+}
+
+.sectionfooter .footer .copyright {
+  width: 50%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -425,5 +414,36 @@ header nav ul li a:active {
 
 .margin {
   margin-top: 10px;
+}
+
+.sectionfooter .footer .copyright p {
+  color: black;
+  font-family: "Radio Canada", sans-serif;
+}
+
+.sectionfooter .footer .socialmedia {
+  width: 50%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sectionfooter .footer .socialmedia .socialmedia-logo {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.sectionfooter .footer .socialmedia .socialmedia-logo .logo-button {
+  border: none;
+  background-color: none;
 }
 /*# sourceMappingURL=style.css.map */

@@ -15,28 +15,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E "/>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<?php include("includes/header.php") ?>
+<?php include_once('includes/header.php'); ?>
 
-        <section class="main_section">
-            <main class="main_content">
-                <div class="slideShow" id="slideshow">
-                    <div class="red">
-
-                    </div>
-                    <div class="zoekblak">
-
-                    </div>
-                    <div class="blauw">
-
-                    </div>
-                </div>                
-            </main>
-        </section>
-
-<script src="js/home.js"></script>
-
-<?php include("includes/footer.php"); ?>
+<?php include_once('includes/footer.php'); ?>

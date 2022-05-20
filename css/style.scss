@@ -2,13 +2,20 @@
   margin: 0;
   box-sizing: border-box;
   color: black;
-  font-family: "Roboto", sans-serif;
+  // font-family: "Inter", sans-serif;
+  font-family: "Radio Canada", sans-serif;
 }
 
 @mixin center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin centerLeft {
+  display: flex;
+  justify-content: center;
+  align-items: left;
 }
 
 @mixin center_high {
@@ -50,7 +57,6 @@ $seventh-color: black;
 }
 
 header {
-  font-family: "Titillium Web", sans-serif;
   border-bottom: $fifth-color solid 6px;
   nav {
     display: flex;
@@ -82,7 +88,7 @@ header {
           cursor: pointer;
           &:hover {
             padding-bottom: 3px;
-            border-bottom: #2f86a6 solid 2px;
+            border-bottom: $fourth-color solid 3.5px;
           }
           &:active {
             color: rgb(213, 213, 213);
@@ -143,12 +149,43 @@ header {
 
 .contact-page {
   width: 100%;
-  font-family: "Roboto", sans-serif;
+  padding: 50px;
+  // .contact-p {
+  //   @include centerLeft();
+  // }
   .contact-title {
-    @include center();
-    font-family: "Roboto", sans-serif;
+    // @include center();
+    border-bottom: #99ffcd;
   }
+  // .problemen-title {
+  //   @include center();
+  // }
+  .container {
+    // @include centerLeft();
+    .veelgestelde-vragen-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      border-radius: 15px;
+      border: #2f86a6 solid 4px;
+      flex-direction: column;
+      width: 450px;
+      height: 90px;
+      .subject-button {
+        background-color: #fff;
+        width: 50%;
+      }
+    }
+  }
+  // .contact-form {
+  //   @include center();
+  // }
 }
+
+.textarea {
+  width: 400px;
+  height: 200px;
+}
+
 
 .section-login {
   @include block(auto, 100%, transparent);
@@ -197,7 +234,6 @@ header {
     @include center();
     h2 {
       color: black;
-      font-family: "Radio Canada", sans-serif;
       font-size: 35px;
     }
   }
@@ -215,7 +251,6 @@ header {
           @include center();
           font-size: 25px;
           color: black;
-          font-family: "Radio Canada", sans-serif;
         }
       }
     }
@@ -267,7 +302,6 @@ header {
 }
 
 .sectionfooter {
-  font-family: "Radio Canada", sans-serif;
   width: 100%;
   height: auto;
   .footer {
@@ -281,7 +315,6 @@ header {
       @include center();
       p {
         color: black;
-        font-family: "Radio Canada", sans-serif;
       }
     }
     .socialmedia {

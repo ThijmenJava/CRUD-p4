@@ -150,37 +150,46 @@ header {
   }
 }
 
-.inlogformulier {
-  font-family: "Roboto", sans-serif;
-  @include center();
-  background-image: url(../img/vacationinlog.jpeg);
-  background-size: cover;
-  width: 100%;
-  height: 800px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: $first-color;
-  .inlogform {
-    align-items: left;
-    border-radius: 25px;
-    font-size: 35px;
-    .inloggen {
-      font-size: 75px;
-      width: 100%;
-      height: 150px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .inloginput {
-        width: 100%;
+.section-login {
+  @include block(auto, 100%, transparent);
+
+  .main-login {
+    @include block(90vh, 100%, transparent);
+    display: flex;
+
+    .login-plek {
+      @include block(90vh, 40%, transparent);
+      @include center();
+
+      .login-block {
+        @include block(350px, 400px, transparent);
+
+        .login-button-plek {
+          @include block(50px, 400px, transparent);
+
+          .button-plek {
+            @include block(50px, 100px, black);
+          }
+        }
       }
+    }
+
+    .plek-plaatje {
+      @include block(90vh, 60%, yellow);
+      background-image: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 1),
+          transparent
+        ),
+        url(../img/boom.jpg);
+      background-size: cover;
     }
   }
 }
 
 .zoekblak {
   width: 900px;
-  height: 300px;
+  height: 275px;
   background-color: #f7f7f7;
   border-radius: 40px;
   .zoek-titel {
@@ -239,6 +248,19 @@ header {
           border-color: $third-color;
           border: 3.3px solid $third-color;
         }
+      }
+    }
+
+    .container-submit {
+      @include block(50px, 100%, transparent);
+      @include center();
+
+      .vlucht-submit {
+        @include remove_input_style();
+        width: 250px;
+        height: 40px;
+        border: 3.3px solid $third-color;
+        border-radius: 8px;
       }
     }
   }

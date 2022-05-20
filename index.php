@@ -50,11 +50,19 @@
                                 </div>
                                 <input type="date" min="<?php echo date("Y-m-d"); ?>" class="input border-right">
                             </div>
+                            <div class="margin input-plek">
+                                <input type="date" min="<?php echo date("Y-m-d"); ?>" class="input border-left">
+                                <div class="black border-right">
+                                    <i class="fa-solid fa-calendar-days calander-size"></i>
+                                </div>
+                            </div>
                         </div>
-
+                        <div class="container-submit margin">
+                            <input class="vlucht-submit" type="submit" name="submit">
+                        </div>
                         </div>
                         <div>
-                            <div>
+                            <div>   
 
                             </div>
                         </div>

@@ -15,19 +15,7 @@
 <?php include_once('includes/header.php'); ?>
         <div class="contact-page">
             <h2 class="contact-p">Contact</h2>
-            <p class="contact-text">Heb je een vraag over jouw vakantie of wil je nog een reis boeken? Vind hieronder snel je antwoord op de meestgestelde vragen.</p>
-            <div class="container">
-                <h4 class="veelgestelde-vragen">Veelgestelde vragen</h4>
-                <div class="veelgestelde-vragen-buttons">
-                    <button class="subject-button">Corona</button>
-                    <button class="subject-button">Reisadvies</button>
-                    <button class="subject-button">Inchecken</button>
-                    <button class="subject-button">Bagage</button>
-                    <button class="subject-button">Reisbureaus</button>
-                    <button class="subject-button">Visum</button>
-                </div>
-            </div>
-            <p class="problemen-p">Staat uw probleem er niet bij, vul hem hieronder in</h3>
+            <p class="contact-text">Heb je een vraag over jouw vakantie of wil je nog een reis boeken? Stel hieronder jouw vragen</p>
                 <form class="contact-form" action="php/inloggen.php" method="post">
                     <div class="container">
                         <label for="name"><p>Name</p></label>

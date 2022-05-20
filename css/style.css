@@ -336,26 +336,8 @@ header nav ul li a:active {
 
 .zoekblak .plek-form .container-input .input-plek .black {
   height: 50px;
-}
-
-.sectionfooter {
-  font-family: "Radio Canada", sans-serif;
-  width: 100%;
-  height: auto;
-}
-
-.sectionfooter .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 75px;
-  border-top: #ffe61b solid 6px;
-}
-
-.sectionfooter .footer .copyright {
-  width: 50%;
-  height: auto;
+  width: 50px;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -386,34 +368,33 @@ header nav ul li a:active {
   border: 3.3px solid #ffb72b;
 }
 
-.border-right {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+.sectionfooter {
+  font-family: "Radio Canada", sans-serif;
+  width: 100%;
+  height: auto;
 }
 
-.border-left {
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+.sectionfooter .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 75px;
+  border-top: #ffe61b solid 6px;
 }
 
-.img-border-right {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
-.img-border-left {
-  border-bottom-left-radius: 0px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.rotate {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.margin {
-  margin-top: 10px;
+.sectionfooter .footer .copyright {
+  width: 50%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .sectionfooter .footer .copyright p {
@@ -445,5 +426,35 @@ header nav ul li a:active {
 .sectionfooter .footer .socialmedia .socialmedia-logo .logo-button {
   border: none;
   background-color: none;
+}
+
+.border-right {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.border-left {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.img-border-right {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.img-border-left {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.rotate {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.margin {
+  margin-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -10,23 +10,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Titillium+Web:ital,wght@1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>My TTT</title>
 </head>
 <?php include_once('includes/header.php'); ?>
-  <body class="">
-    <div class="inlogformulier">
-      <form class="inlogform" action="php/inloggen.php" method="post">
-        <?php if(isset($_GET['error'])) {echo "<p>" . $_GET['error'] . "</p>";} ?>
-        <div class="inloggen"><b>Log in</b></div>
-        <div class="container">
-        <label for="uname"><b>Naam</b></label>
-        <input class="inloginput" type="text" placeholder="Enter Username" name="uname" required>
-        <label for="psw"><b>Wachtwoord</b></label>
-        <input class="inloginput" type="password" placeholder="Enter Password" name="psw" required>
-        <button class="submit" type="submit" name="inloggen">Inloggen</button>
-      </form>
-    </div>
-  </div>
+  <body>
+
+    <section class="section-login">
+      <main class="main-login">
+        <div class="login-plek">
+            <div class="login-block">
+              <div class="login-button-plek">
+                <div class="button-plek">
+
+                </div>
+              </div>
+              <hr>
+            </div>
+        </div>
+        <div class="plek-plaatje"></div>
+      </main>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
   const form = document.querySelector("form");
   const inputs = document.querySelectorAll("form input");

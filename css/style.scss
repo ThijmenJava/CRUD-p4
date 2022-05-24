@@ -409,10 +409,64 @@ header {
       @include center();
       .login-block {
         @include block(350px, 400px, transparent);
+        .form-container {
+          @include block(300px, 100%, transparent);
+
+          .login-container {
+            @include block(100%, 100%, transparent);
+            display: block;
+
+            .titel {
+              @include center();
+              @include block(50px, 100%, transparent);
+            }
+
+            .label-input {
+              @include block(20px, 100%, black);
+            }
+
+            .input-plek {
+              @include block(60px, 100%, yellow);
+            }
+          }
+
+          .singup-container {
+            @include block(100%, 100%, yellow);
+            display: none;
+          }
+        }
         .login-button-plek {
           @include block(50px, 400px, transparent);
           .button-plek {
-            @include block(50px, 100px, black);
+            @include block(50px, 200px, transparent);
+            @include center();
+
+            .login-button {
+              @include remove_input_style();
+              width: 40%;
+              height: 80%;
+              font-size: 20px;
+              transition-duration: 0.3s;
+              border-radius: 8px;
+
+              &:hover {
+                background-color: #9fb4ff;
+              }
+            }
+
+            .signup-button {
+              @include remove_input_style();
+              margin-left: 10%;
+              width: 40%;
+              height: 80%;
+              font-size: 20px;
+              transition-duration: 0.3s;
+              border-radius: 8px;
+
+              &:hover {
+                background-color: #9fb4ff;
+              }
+            }
           }
         }
       }

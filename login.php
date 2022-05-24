@@ -21,60 +21,28 @@
             <div class="login-block">
               <div class="login-button-plek">
                 <div class="button-plek">
-
+                  <button class="login-button" id="login">Login</button>
+                  <button class="signup-button" id="signup">Signup</button>
                 </div>
               </div>
               <hr>
+              <div class="form-container">
+                <div class="login-container" id="logindiv">
+                  <div class="titel"><h2>Login</h2></div>
+                  <div class="label-input"><h3>Email</h3></div>
+                  <div class="input-plek"><input type="text"></div>
+                </div>
+                <div class="singup-container" id="signupdiv">
+                  <div><h2>SignUp</h2></div>
+                </div>
+              </div>
             </div>
         </div>
         <div class="plek-plaatje"></div>
       </main>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-  const form = document.querySelector("form");
-  const inputs = document.querySelectorAll("form input");
-  const button = document.querySelector("form button");
-
-  button.addEventListener("click", (e) => {
-    e.preventDefault();
-    let error = false;
-    
-    for (let i = 0; i < inputs.length; i++) {
-        if (!inputs[i].value.length) {
-          error = true;
-          inputs[i].style.border = "1px solid red";
-        }
-    }
-
-    if(!error) {
-      form.submit();
-    }
-  });
-</script>
-<script src="JS/main.js"></script>
+<script src="JS/myttt.js"></script>
 
 <?php include_once('includes/footer.php'); ?>
 </body>

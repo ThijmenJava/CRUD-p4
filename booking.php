@@ -9,11 +9,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Titillium+Web:ital,wght@1,300&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Booking</title>
 </head>
-<body>
+    <body>
 <?php include_once('includes/header.php'); ?>
-
+        <div class="booking">
+            <div class="opties">
+                <p></p>
+                <button class="optie">Vakantietype</button>
+                <button class="optie">Vertrekmaand</button>
+                <button class="optie">Reisduur</button>
+                <button class="optie">Luchthaven</button>
+                <button class="optie">Aantal sterren</button>
+                <button class="optie">Accommodatietype</button>
+                <button class="optie">Faciliteiten</button>
+                <button class="optie">Budget</button>
+            </div>
+            <button class="zoeken">Zoek</button>
+        </div>
 <?php include_once('includes/footer.php'); ?>
-</body>
+    </body>
 </html>

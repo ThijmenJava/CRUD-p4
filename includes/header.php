@@ -13,7 +13,7 @@
         </ul>
         <ul class="header-ul-right">
             <img class="inlog-logo" src="img/inlog.png" alt="">
-            <li><a href="login.php">My TTT</a></li>
+            <li><a class="my-ttt" href="login.php">Login</a></li>
         </ul>
     </nav>
 </header>

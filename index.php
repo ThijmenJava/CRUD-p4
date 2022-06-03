@@ -12,74 +12,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
     <title>Home</title>
 </head>
-<body>
-    
+    <body>
     <?php include("includes/header.php") ?>
-    
-    <section class="main_section">
-        <main class="main_content">
-            <div class="slideShow" id="slideshow">
-                <div class="zoekblak">
-                    <div class="zoek-titel">
-                        <h2>Zoek vlucht</h2>
-                    </div>
-                    <form class="plek-form" action="" method="post">
-                        <div class="container-labels">
-                            <div class="labels-plek">
-                                <h3>Vanaf</h3>
-                            </div>
-                            <div class="labels-plek">
-                                <h3>Naar</h3>
-                            </div>
+        <div class="main-section">
+            <div class="content-container">
+                <div class="slideShow" id="slideshow">
+                    <div class="zoekbalk">
+                        <div class="zoeken-titel">
+                            <h1>Vakantie zoeken</h1>
                         </div>
-                        <div class="container-input">
-                            <div class="input-plek">
-                                <div class="black img-border-right">
-                                    <img class="vliegtuig-img" src="img/airplane-png.png" alt="">
-                                </div>
-                                <input class="input border-right" type="text">
-                            </div>
-                            <div class="input-plek">
-                                <input class="input border-left" type="text">
-                                <div class="black img-border-left border-left rotate">
-                                    <img class="vliegtuig-img" src="img/airplane-png.png" alt="">                                    
-                                </div>
-                            </div>
-                            <div class="margin input-plek">
-                                <div class="black border-left">
-                                    <i class="fa-solid fa-calendar-days calander-size"></i>
-                                </div>
-                                <input type="date" min="<?php echo date("Y-m-d"); ?>" class="input border-right">
-                            </div>
-                            <div class="margin input-plek">
-                                <input type="date" min="<?php echo date("Y-m-d"); ?>" class="input border-left">
-                                <div class="black border-right">
-                                    <i class="fa-solid fa-calendar-days calander-size"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container-submit margin">
-                            <input class="vlucht-submit" type="submit" name="submit">
-                        </div>
-                        </div>
-                        <div>
-                            <div>   
-
-                            </div>
-                        </div>
-                        <div>
-
+                        <form class="zoek-form" action="php/index.php" method="post">
+                        <div class="container">
+                            <label for="name"><p>Land</p></label>
+                            <input class="zoek-input" type="text" placeholder="Land..." name="name" required>
+                            <label for="person"><p>Aantal personen</p></label>
+                            <input class="zoek-input" type="number" placeholder="Aantal personen..." name="" required>
+                            <label for="date"><p>Begindatum</p></label>
+                            <input class="zoek-input" type="date" placeholder="" name="subject" required>
+                            <label for="date"><p>Einddatum</p></label>
+                            <input class="zoek-input" type="date" placeholder="" name="subject" required>
+                            <button class="submit-button" type="submit" name="verzenden">Verzenden</button>
                         </div>
                     </form>
+                    </div>
                 </div>
-            </div>                
-        </main>
-    </section>
-</body>
-
+            </div>
+        </div>
+    <?php include("includes/footer.php"); ?>
+    </body>
 <script src="js/home.js"></script>
 <script src="https://kit.fontawesome.com/385f3b2853.js" crossorigin="anonymous"></script>
-
-<?php include("includes/footer.php"); ?>
-
 </html>

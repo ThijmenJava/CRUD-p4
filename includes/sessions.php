@@ -4,8 +4,8 @@ include("util.php");
 
 session_start();
 
-$name = $_SESSION["name"];
+$email = $_SESSION["email"];
 
-if (empty($name)) {
-    redirect("../index.php");
+if (empty($email)) {
+    redirect("login.php");
 }

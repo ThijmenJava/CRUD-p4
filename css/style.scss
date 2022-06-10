@@ -53,6 +53,10 @@
   margin-bottom: 15px;
 }
 
+.center {
+  @include center();
+}
+
 $first-color: white;
 $second-color: #9fb4ff;
 $third-color: #ffb72b;
@@ -862,9 +866,60 @@ header {
 .all-content-plek {
   min-height: 70vh;
   width: 100%;
-
+  display: flex;
   .main-content {
-    @include block(100%, 100%, transparent);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .content {
+      @include block(100%, 100%, transparent);
+      display: flex;
+      flex: 1;
+      .vakantie-content {
+        display: block;
+        @include block(100%, 100%, blue);
+        flex: 1;
+      }
+      .geboekte-content {
+        display: none;
+        @include block(100%, 100%, red);
+        flex: 1;
+      }
+      .reviews-content {
+        display: none;
+        @include block(100%, 100%, transparent);
+        flex: 1;
+        .reviews-button-place {
+          @include block(50px, 100%, transparent);
+          @include center();
+          .button-review {
+            @include remove_input_style();
+            height: 40px;
+            width: 175px;
+            transition-duration: 0.35s;
+            border-radius: 8px;
+            font-size: 20px;
+
+            &:hover {
+              background-color: #9fb4ff;
+              border-radius: 8px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .contact-content {
+        display: none;
+        @include block(100%, 100%, transparent);
+        flex: 1;
+        .contact-info {
+          @include block(100%, 100%, transparent);
+          display: flex;
+          flex-wrap: wrap;
+          padding: 4px;
+        }
+      }
+    }
     .buttons-nav {
       @include block(60px, 100%, transparent);
       @include center_allround();
@@ -885,6 +940,69 @@ header {
       }
     }
   }
+}
+
+.review-add-plek {
+  @include block(100vh, 100%, transparent);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.contact-blok {
+  @include block(250px, 300px, transparent);
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-right: 5.5px;
+  .send-by {
+    @include block(25px, 100%, transparent);
+    display: flex;
+    .send-by-plek {
+      @include center();
+      width: 75%;
+      height: 100%;
+    }
+    .id-plek {
+      @include center();
+      width: 25%;
+      height: 100%;
+    }
+  }
+  .button-plek {
+    @include center();
+    width: 100%;
+    height: 38px;
+    overflow: hidden;
+  }
+  .textarea-plek {
+    width: 100%;
+    height: 135px;
+    .textarea-content {
+      width: 100%;
+      height: 100%;
+      resize: none;
+    }
+  }
+}
+
+.a-tag-container {
+  width: 100%;
+  height: 100%;
+}
+
+.button-style {
+  position: relative;
+  border: none;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: red;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 @media only screen and (max-width: 1100px) {

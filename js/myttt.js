@@ -10,7 +10,7 @@ loginButton.addEventListener("click", (event) => {
 });
 
 signupButton.addEventListener("click", (event) => {
-  event.preventDefault("signup");
+  event.preventDefault();
   divsignup.style.display = "block";
   divlogin.style.display = "none";
 });

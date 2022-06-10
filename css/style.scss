@@ -53,6 +53,10 @@
   margin-bottom: 15px;
 }
 
+.center {
+  @include center();
+}
+
 $first-color: white;
 $second-color: #9fb4ff;
 $third-color: #ffb72b;
@@ -813,6 +817,113 @@ header {
   margin-top: 10px;
 }
 
+.contact-opnemen {
+  // box-shadow: 0px -15px 25px -25px;
+  background-color: $first-color;
+  height: 350px;
+  @include center();
+  width: 100%;
+  .container {
+    width: 850px;
+    .contact-opnemen-title {
+      @include center();
+    }
+    .contact-opnemen-p {
+      @include center();
+      margin-top: 25px;
+      @include margin_bottom();
+    }
+    .container {
+      @include center();
+      .naar-formulier {
+        border: 2px solid currentColor;
+        border-radius: 25px;
+        color: black;
+        overflow: hidden;
+        padding: 1rem 2rem;
+        position: relative;
+        text-decoration: none;
+        transition: 0.2s transform ease-in-out;
+        will-change: transform;
+        z-index: 0;
+        cursor: pointer;
+
+        &::after {
+          background-color: $second-color;
+          border-radius: 3rem;
+          content: "";
+          display: block;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform: translate(-100%, 0) rotate(10deg);
+          transform-origin: top left;
+          transition: 0.2s transform ease-out;
+          will-change: transform;
+          z-index: -1;
+        }
+        &:hover::after {
+          transform: translate(0, 0);
+        }
+        &:hover {
+          border: 2px solid transparent;
+          color: black;
+          will-change: transform;
+        }
+      }
+    }
+    .container-orange {
+      @include center();
+      .contact {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        background-color: $second-color;
+        border-radius: 24px;
+        width: 175px;
+        height: 150px;
+        margin-left: 15px;
+        margin-right: 15px;
+        .orange {
+          padding-bottom: 10px;
+          @include center();
+          p {
+            @include center();
+          }
+          &:hover {
+            color: $third-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.border {
+  border-radius: 8px;
+}
+
+.img-border-right {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.img-border-left {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.margin {
+  margin-top: 10px;
+}
+
 .section-login {
   @include block(auto, 100%, transparent);
   .main-login {
@@ -970,6 +1081,202 @@ header {
 
 .profile-plek {
   @include block(200px, 100%, transparent);
+
+  .profile-content {
+    @include block(200px, 100%, transparent);
+    border-top: 5px solid $fifth-color;
+    display: flex;
+
+    .profile-items-plek {
+      height: 100%;
+      width: 70%;
+      background-color: #ffb72b;
+
+      .buttons-nav {
+        width: 100%;
+        height: 70px;
+        background-color: #2f86a6;
+      }
+    }
+
+    .profile-image-plek {
+      @include center();
+      height: 100%;
+      width: 30%;
+      .profile-image {
+        width: 40%;
+        height: 80%;
+        border-radius: 100%;
+        border: 1px solid gray;
+      }
+    }
+  }
+}
+
+.all-content-plek {
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  .main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .content {
+      @include block(100%, 100%, transparent);
+      display: flex;
+      flex: 1;
+      .vakantie-content {
+        display: block;
+        @include block(100%, 100%, blue);
+        flex: 1;
+      }
+      .geboekte-content {
+        display: none;
+        @include block(100%, 100%, red);
+        flex: 1;
+      }
+      .reviews-content {
+        display: none;
+        @include block(100%, 100%, transparent);
+        flex: 1;
+        .reviews-button-place {
+          @include block(50px, 100%, transparent);
+          @include center();
+          .button-review {
+            @include remove_input_style();
+            height: 40px;
+            width: 175px;
+            transition-duration: 0.35s;
+            border-radius: 8px;
+            font-size: 20px;
+
+            &:hover {
+              background-color: #9fb4ff;
+              border-radius: 8px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .contact-content {
+        display: none;
+        @include block(100%, 100%, transparent);
+        flex: 1;
+        .contact-info {
+          @include block(100%, 100%, transparent);
+          display: flex;
+          flex-wrap: wrap;
+          padding: 4px;
+        }
+      }
+    }
+    .buttons-nav {
+      @include block(60px, 100%, transparent);
+      @include center_allround();
+
+      .button-nav {
+        @include remove_input_style();
+        height: 40px;
+        width: 120px;
+        transition-duration: 0.35s;
+        border-radius: 8px;
+        font-size: 20px;
+
+        &:hover {
+          background-color: #9fb4ff;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.review-add-plek {
+  @include block(100vh, 100%, transparent);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.contact-blok {
+  @include block(250px, 300px, transparent);
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-right: 5.5px;
+  .send-by {
+    @include block(25px, 100%, transparent);
+    display: flex;
+    .send-by-plek {
+      @include center();
+      width: 75%;
+      height: 100%;
+    }
+    .id-plek {
+      @include center();
+      width: 25%;
+      height: 100%;
+    }
+  }
+  .button-plek {
+    @include center();
+    width: 100%;
+    height: 38px;
+    overflow: hidden;
+  }
+  .textarea-plek {
+    width: 100%;
+    height: 135px;
+    .textarea-content {
+      width: 100%;
+      height: 100%;
+      resize: none;
+    }
+  }
+}
+
+.a-tag-container {
+  width: 100%;
+  height: 100%;
+}
+
+.button-style {
+  position: relative;
+  border: none;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: red;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .plek-plaatje {
+    display: none;
+  }
+  .section-login .main-login .login-plek {
+    width: 100%;
+  }
+}
+
+.zoekblak {
+  width: 900px;
+  height: 275px;
+  background-color: #f7f7f7;
+  border-radius: 40px;
+  .zoek-titel {
+    @include block(60px, 100%, transparent);
+    @include center();
+    h2 {
+      color: black;
+      font-size: 35px;
+    }
+  }
 
   .profile-content {
     @include block(200px, 100%, transparent);

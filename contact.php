@@ -26,7 +26,7 @@
             <div class="contact-page">
                 <h1 class="contact-title">Formulier</h1>
                 <p class="contact-text">Heb je een vraag over jouw vakantie of wil je nog een reis boeken? Vul dit formulier in en stel hieronder jouw vraag.</p>
-                    <form class="contact-form" action="php/inloggen.php" method="post">
+                    <form class="contact-form" action="php/contactbackend.php" method="POST">
                         <div class="container">
                             <label for="name"><p>Volledige naam</p></label>
                             <input class="contact-input" type="text" placeholder="Voornaam..." name="name" required>
@@ -35,8 +35,9 @@
                             <label for="subject"><p>Onderwerp</p></label>
                             <input class="contact-input" type="text" placeholder="Onderwerp..." name="subject" required>
                             <label for="subject"><p>Beschrijving</p></label>
-                            <textarea class="textarea" name="textarea" id="textarea" cols="30" rows="50" placeholder="Beschrijving..." style="resize: none" ></textarea>
-                            <button class="submit-button" type="submit" name="verzenden">Verzenden</button>
+                            <textarea class="textarea" name="textarea" id="textarea" cols="30" rows="50" placeholder="Beschrijving..." style="resize: none" required></textarea>
+                            <input class="submit-button" type="submit" name="submit" value="Verzenden">
+                            <!-- <button class="submit-button" type="submit" name="submit">Verzenden</button> -->
                         </div>
                     </form>
                 </div>

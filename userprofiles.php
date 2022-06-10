@@ -1,6 +1,7 @@
 <?php
 include("includes/sessions.php");
 include("includes/connect.php");
+include("php/contactshow.php");
 
 global $conn;
 
@@ -43,6 +44,7 @@ $row = $stmt->fetch();
     <section class="all-content-plek">
         <main class="main-content"> 
             <div class="buttons-nav">
+<<<<<<< HEAD
                 <button class="button-nav">Vakantie</button>
                 <button class="button-nav">Reviews</button>
                 <button class="button-nav">Contact</button> 
@@ -54,4 +56,39 @@ $row = $stmt->fetch();
     <?php include("includes/footer.php"); ?>
 
 </body>
+=======
+                <button class="button-nav" id="vakantie">Vakantie</button>
+                <button class="button-nav" id="reviews">Reviews</button>
+                <button class="button-nav" id="contact">Contact</button> 
+            </div>
+            <hr>
+            <div class="content">
+                <div class="vakantie-content" id="vakantie-c">
+                 
+                </div>
+                <div class="reviews-content" id="reviews-c">
+                    <div class="reviews-button-place">
+                        <button class="button-review">+ Create Review</button>
+                    </div>
+                </div>
+                <div class="contact-content" id="contact-c">
+                    <div class="contact-info">
+                        <?php showContact("SELECT * FROM contact WHERE email = '$email' ORDER BY contactID ASC", "includes/connect.php"); ?>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <section class="review-add-plek">
+        <div class="review-div">
+
+        </div>
+    </section>
+
+    <?php include("includes/footer.php"); ?>
+
+</body>
+<script src="js/userprofiles.js"></script>
+>>>>>>> 70d99da86bf15642817b934d642e9c3d85f4b1bf
 </html>

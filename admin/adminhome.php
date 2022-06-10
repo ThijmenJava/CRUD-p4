@@ -38,6 +38,8 @@ $row = $stmt->fetch();
         </div>
     </section>
 
+<<<<<<< HEAD
+=======
     <section class="all-content-plek">
         <main class="main-content"> 
             <div class="buttons-nav">
@@ -66,6 +68,7 @@ $row = $stmt->fetch();
         </main>
     </section>
 
+>>>>>>> 70d99da86bf15642817b934d642e9c3d85f4b1bf
     <?php include("adminfooter.php"); ?>
 
 </body>

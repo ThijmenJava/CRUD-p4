@@ -13,7 +13,7 @@
 </head>
     <body>
 <?php include_once('includes/header.php'); ?>
-        <div class="contact-opnemen">
+        <div class="contact-nemen">
                 <div class="container">
                     <h1 class="contact-title">Contact</h1>
                     <p class="contact-p">Waar kunnen wij je mee helpen?</p>
@@ -47,19 +47,19 @@
                     <h1 class="contact-opnemen-title">Contact opnemen</h1>
                     <p class="contact-opnemen-p">Wil je contact met ons opnemen? Je kunt ons bereiken via de onderstaande middelen.</p>
                     <div class="container-orange">
-                        <div class="contact opnemen-1">
+                        <div class="contact-1">
                             <a class="orange" href="afspraak_maken">Afpraak maken</a>
                             <p>Maak online een afspraak in het reisbureau.</p>
                         </div>
-                        <div class="contact opnemen-2">
+                        <div class="contact-1">
                             <a class="orange" href="">Bel ons - 088 - 555 4999</a>
                             <p>Maandag t/m zaterdag bereikbaar.</p>
                         </div>
-                        <div class="contact opnemen-3">
+                        <div class="contact-2">
                             <a class="orange" href="#formulier">Mail ons</a>
                             <p>Je kunt 24 uur per dag je vragen stellen.</p>
                         </div>
-                        <div class="contact opnemen-4">
+                        <div class="contact-2">
                             <a class="orange" href="zoek_uw_reisbureau">Zoek uw reisbureau</a>
                             <p>Met de reisbureaus zijn wij altijd in de buurt.</p>
                         </div>

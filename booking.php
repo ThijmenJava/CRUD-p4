@@ -14,19 +14,45 @@
     <body>
 <?php include_once('includes/header.php'); ?>
         <div class="booking">
-            <div class="opties">
-                <p></p>
-                <button class="optie">Vakantietype</button>
-                <button class="optie">Vertrekmaand</button>
-                <button class="optie">Reisduur</button>
-                <button class="optie">Luchthaven</button>
-                <button class="optie">Aantal sterren</button>
-                <button class="optie">Accommodatietype</button>
-                <button class="optie">Faciliteiten</button>
-                <button class="optie">Budget</button>
+            <div class="container">
+                <div class="opties">
+                    <h4 class="optie">Vakantietype</h4>
+                    <select class="select">
+                        <option class="optie">Wintersport</option>
+                        <option class="optie">Zomervakantie</option>
+                        <option class="optie">Verre reizen</option>
+                        <option class="optie">Autovakantie</option>
+                        <option class="optie">Stedentrips</option>
+                        <option class="optie">Last-Minute</option>
+                    </select>
+                
+                    <h4 class="optie">Reisduur</h4>
+                        <input type="text" class="border"></input>
+
+                    <h4 class="optie">Aantal sterren</h4>
+                        <input type="checkbox" class="optie">1</input>
+                        <input type="checkbox" class="optie">2</input>
+                        <input type="checkbox" class="optie">3</input>
+                        <input type="checkbox" class="optie">4</input>
+                        <input type="checkbox" class="optie">5</input>
+
+                    <h4 class="optie">Accomodatietype</h4>
+                        <select>
+                            <option class="optie">Hotel</option>
+                            <option class="optie">Camping</option>
+                            <option class="optie">Apartement</option>
+                            <option class="optie">Resort</option>
+                            <option class="optie">Aparthotel</option>
+                        </select>
+                    
+                    <h4 class="optie">Budget</h4>
+                        <input type="number" class="border"></input>
+                </div>
+                <div class="zoekopdracht">
+                    <div class="vakanties"></div>
+                </div>
+                </div>
             </div>
-            <button class="zoeken">Zoek</button>
-        </div>
 <?php include_once('includes/footer.php'); ?>
     </body>
 </html>

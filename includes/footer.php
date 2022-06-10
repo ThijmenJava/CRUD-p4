@@ -1,3 +1,6 @@
+<div class="reizen-footer">
+    
+</div>
 <section class="sectionfooter">
     <div class="footer">
         <div class="copyright">

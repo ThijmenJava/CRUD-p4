@@ -5,22 +5,30 @@ include("../includes/util.php");
 
 global $conn;
 
-if (isset($_POST["submitr"])) {
-    $email = $_POST["emailr"];
-    $naam = $_POST["naamr"];
-    $wachtwoord = $_POST["wachtwoordr"];
+if (isset($_POST["submit-signup"])) {
+    $email = $_POST["email"];
+    $naam = $_POST["naam"];
+    $wachtwoord = $_POST["wachtwoord"];
 
     if (empty($email) || empty($naam) || empty($wachtwoord)) {
         $error = "You need to fill all forms!";
+        echo "You need to fill all forms!";
     } else {
-        $query = "INSERT INTO users(email, naam, wachtwoord) VALUES (:email, :naam, :wachtwoord)";
+        $query = "SELECT * FROM users WHERE email = :email";
         $stmt = $conn->prepare($query);
-        $stmt->bindParam(":naam", $naam);
-        $stmt->bindParam(":wachtwoord", $wachtwoord);
         $stmt->bindParam(":email", $email);
         $stmt->execute();
-
-        redirect("../admin/adminhome.php");
+        if($stmt->rowCount() == 1) {
+            redirect("../login.php");
+        } else {
+            $query = "INSERT INTO users(naam, wachtwoord, email, admin) VALUES (:naam, :wachtwoord, :email, 1)";
+            $stmt = $conn->prepare($query);
+            $stmt->bindParam(":naam", $naam);
+            $stmt->bindParam(":wachtwoord", $wachtwoord);
+            $stmt->bindParam(":email", $email);
+            $stmt->execute();
+            redirect("../login.php");
+        }
     }
 }
 

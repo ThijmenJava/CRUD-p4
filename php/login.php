@@ -5,24 +5,38 @@ include("../includes/util.php");
 
 global $conn;
 
+session_start();
+
+$_SESSION['email'] = "";
+
 if (isset($_POST["submit"])) {
-    $naam = $_POST["naam"];
+    $_SESSION['email'] = $_POST["email"];
     $wachtwoord = $_POST["wachtwoord"];
+    $email = $_SESSION['email'];
 
     var_dump($_POST);
-    if (empty($naam) || empty($wachtwoord)) {
+    if (empty($email) || empty($wachtwoord)) {
         $error = "You need to fill all forms!";
-        redirect("../test.php");
+        redirect("../login.php");
     } else {
-        $query = "SELECT * FROM users WHERE naam = :naam AND wachtwoord = :wachtwoord";
+        $query = "SELECT * FROM users WHERE email = :email AND wachtwoord = :wachtwoord";
         $stmt = $conn->prepare($query);
-        $stmt->bindParam(":naam", $naam);
+        $stmt->bindParam(":email", $email);
         $stmt->bindParam(":wachtwoord", $wachtwoord);
         $stmt->execute();
         if ($stmt->rowCount() == 1) {
-            redirect("../admin/adminhome.php");
+            $query = "SELECT admin FROM users WHERE email = :email";
+            $stmt = $conn->prepare($query);
+            $stmt->bindParam(":email", $email);
+            $stmt->execute();
+            $row = $stmt->fetch();
+            if($row['admin'] == 0) {
+                redirect("../admin/adminhome.php");
+            } else {
+                redirect("../userprofiles.php");
+            }
         } else {
-            redirect("../test.php");
+            redirect("../login.php");
         }
     }
 }

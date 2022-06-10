@@ -12,6 +12,12 @@
   align-items: center;
 }
 
+@mixin center_allround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 @mixin center_left {
   display: flex;
   justify-content: center;
@@ -370,15 +376,74 @@ header {
       box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
       width: 100%;
       height: 800px;
+      transition-duration: 0.1s;
       .zoekbalk {
-        width: 450px;
-        height: 700px;
+        width: 350px;
+        height: 500px;
         background-color: $first-color;
         border-radius: 24px;
         .zoeken-titel {
           @include center();
           width: 100%;
           height: 100px;
+        }
+        .zoek-form {
+          @include center();
+          font-weight: 500;
+          .container {
+            .zoek-input {
+              border-radius: 25px;
+              border: $second-color solid 2px;
+              padding-bottom: 12.5px;
+              padding-top: 12.5px;
+              padding-left: 10px;
+              padding-right: 10px;
+              margin-bottom: 15px;
+              width: 175px;
+              @include center();
+            }
+            .submit-button {
+              @include center();
+              flex-direction: column;
+              border: 2px solid currentColor;
+              border-radius: 25px;
+              color: black;
+              overflow: hidden;
+              padding: 12.5px;
+              width: 175px;
+              position: relative;
+              text-decoration: none;
+              transition: 0.2s transform ease-in-out;
+              will-change: transform;
+              z-index: 0;
+              cursor: pointer;
+
+              &::after {
+                background-color: $third-color;
+                border-radius: 3rem;
+                content: "";
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: translate(-100%, 0) rotate(10deg);
+                transform-origin: top left;
+                transition: 0.2s transform ease-out;
+                will-change: transform;
+                z-index: -1;
+              }
+              &:hover::after {
+                transform: translate(0, 0);
+              }
+              &:hover {
+                border: 2px solid transparent;
+                color: black;
+                will-change: transform;
+              }
+            }
+          }
         }
       }
     }
@@ -387,20 +452,45 @@ header {
 
 .booking {
   width: 100%;
-  .opties {
-    background-color: $first-color;
-    width: 100%;
-    height: 100px;
-    .optie {
-      border-radius: 8px;
-      width: auto;
+  .container {
+    @include center();
+    .opties {
+      width: 30%;
+      display: flex;
+      justify-content: right;
+      align-content: right;
+      flex-direction: column;
+      .optie {
+        border-radius: 8px;
+        width: 200px;
+      }
+      select {
+        width: 200px;
+        border: $third-color 2px solid;
+      }
+      .border {
+        width: 200px;
+        border: $third-color 2px solid;
+      }
+    }
+    .zoekopdracht {
+      @include center();
+      flex-direction: column;
+      width: 70%;
+      background-color: blue;
+      .vakanties {
+        width: 450px;
+        height: 350px;
+        background-color: red;
+        display: flex;
+        align-items: left;
+        justify-content: left;
+      }
     }
   }
 }
 
-.contact-opnemen {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
-    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+.contact-nemen {
   background-color: $first-color;
   height: 350px;
   @include center();
@@ -456,6 +546,26 @@ header {
         }
       }
     }
+  }
+  @media only screen and (max-width: 900px) {
+    .container {
+      width: 600px !important;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .container {
+      width: 350px !important;
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .contact-opnemen {
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .contact-opnemen {
+    height: 200px;
   }
 }
 
@@ -556,11 +666,18 @@ header {
     }
   }
 }
+@media only screen and (max-width: 500px) {
+  .formulier-container {
+    padding-top: 15px;
+    padding-bottom: 35px;
+    width: 100%;
+    font-size: smaller;
+  }
+}
 
 .contact-opnemen {
-  // box-shadow: 0px -15px 25px -25px;
   background-color: $first-color;
-  height: 350px;
+  height: 450px;
   @include center();
   width: 100%;
   .container {
@@ -616,7 +733,8 @@ header {
     }
     .container-orange {
       @include center();
-      .contact {
+      .contact-1,
+      .contact-2 {
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 10px;
@@ -637,7 +755,38 @@ header {
           }
         }
       }
+      @media only screen and (max-width: 850px) {
+        .contact-1,
+        .contact-2 {
+          display: flex;
+          flex-direction: column;
+        }
+      }
     }
+    @media only screen and (max-width: 600px) {
+      .container-orange {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .container {
+      width: 850px;
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .contact {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    width: 175px;
+    height: 150px;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -687,17 +836,83 @@ header {
             }
 
             .label-input {
-              @include block(20px, 100%, black);
+              @include block(30px, 100%, transparent);
+              .margin {
+                margin-top: 5px;
+              }
             }
 
             .input-plek {
-              @include block(60px, 100%, yellow);
+              @include block(40px, 100%, transparent);
+              .input {
+                width: 100%;
+                height: 40px;
+                font-size: 18px;
+                border: rgb(182, 178, 178) 2px solid;
+                border-radius: 4px;
+              }
+
+              .login-input {
+                width: 100%;
+                height: 30px;
+                font-size: 18px;
+                border: none;
+                border-radius: 5px;
+                background-color: $third-color;
+                transition-duration: 0.4s;
+                border: 3px solid transparent;
+
+                &:hover {
+                  background-color: white;
+                  border: 3px solid $third-color;
+                  cursor: pointer;
+                }
+              }
             }
           }
 
           .singup-container {
-            @include block(100%, 100%, yellow);
+            @include block(auto, 100%, transparent);
             display: none;
+            .titel {
+              @include center();
+              @include block(50px, 100%, transparent);
+            }
+
+            .label-input {
+              @include block(30px, 100%, transparent);
+              .margin {
+                margin-top: 5px;
+              }
+            }
+
+            .input-plek {
+              @include block(40px, 100%, transparent);
+              .input {
+                width: 100%;
+                height: 40px;
+                font-size: 18px;
+                border: rgb(182, 178, 178) 2px solid;
+                border-radius: 4px;
+              }
+            }
+
+            .signup-input {
+              width: 100%;
+              height: 30px;
+              font-size: 18px;
+              border: none;
+              border-radius: 5px;
+              background-color: $third-color;
+              transition-duration: 0.4s;
+              border: 3px solid transparent;
+
+              &:hover {
+                background-color: white;
+                border: 3px solid $third-color;
+                cursor: pointer;
+              }
+            }
           }
         }
 
@@ -717,6 +932,7 @@ header {
 
               &:hover {
                 background-color: #9fb4ff;
+                cursor: pointer;
               }
             }
 
@@ -731,6 +947,7 @@ header {
 
               &:hover {
                 background-color: #9fb4ff;
+                cursor: pointer;
               }
             }
           }
@@ -751,6 +968,151 @@ header {
   }
 }
 
+.profile-plek {
+  @include block(200px, 100%, transparent);
+
+  .profile-content {
+    @include block(200px, 100%, transparent);
+    border-top: 5px solid $fifth-color;
+    display: flex;
+
+    .profile-items-plek {
+      height: 100%;
+      width: 70%;
+      background-color: #ffb72b;
+
+      .buttons-nav {
+        width: 100%;
+        height: 70px;
+        background-color: #2f86a6;
+      }
+    }
+
+    .profile-image-plek {
+      @include center();
+      height: 100%;
+      width: 30%;
+      .profile-image {
+        width: 40%;
+        height: 80%;
+        border-radius: 100%;
+        border: 1px solid gray;
+      }
+    }
+  }
+}
+
+.all-content-plek {
+  min-height: 70vh;
+  width: 100%;
+
+  .main-content {
+    @include block(100%, 100%, transparent);
+    .buttons-nav {
+      @include block(60px, 100%, transparent);
+      @include center_allround();
+
+      .button-nav {
+        @include remove_input_style();
+        height: 40px;
+        width: 120px;
+        transition-duration: 0.35s;
+        border-radius: 8px;
+        font-size: 20px;
+
+        &:hover {
+          background-color: #9fb4ff;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .plek-plaatje {
+    display: none;
+  }
+  .section-login .main-login .login-plek {
+    width: 100%;
+  }
+}
+
+// .zoekblak {
+//   width: 900px;
+//   height: 275px;
+//   background-color: #f7f7f7;
+//   border-radius: 40px;
+//   .zoek-titel {
+//     @include block(60px, 100%, transparent);
+//     @include center();
+//     h2 {
+//       color: black;
+//       font-size: 35px;
+//     }
+//   }
+
+// .plek-form {
+//   @include block(240px, 100%, transparent);
+//   .container-labels {
+//     @include block(30px, 100%, transparent);
+//     display: flex;
+//     .labels-plek {
+//       @include block(100%, 50%, transparent);
+//       @include center();
+//       h3 {
+//         @include block(35px, 90px, $third-color);
+//         @include center();
+//         font-size: 25px;
+//         color: black;
+//       }
+//     }
+//   }
+
+//   .container-input {
+//     @include block(auto, 100%, transparent);
+//     display: flex;
+//     flex-wrap: wrap;
+//     .input-plek {
+//       @include block(auto, 50%, transparent);
+//       @include center_high();
+//       .black {
+//         @include block(50px, 50px, transparent);
+//         @include center();
+//         background-color: $third-color;
+//         .vliegtuig-img {
+//           width: 90%;
+//           height: 90%;
+//         }
+//         .calander-size {
+//           font-size: 35px;
+//         }
+//       }
+//       .input {
+//         @include remove_input_style();
+//         width: 70%;
+//         height: 50px;
+//         border-color: $third-color;
+//         border: 3.3px solid $third-color;
+//       }
+//     }
+//   }
+
+//     .container-submit {
+//       @include block(50px, 100%, transparent);
+//       @include center();
+//       .vlucht-submit {
+//         @include remove_input_style();
+//         width: 250px;
+//         height: 40px;
+//         border: 3.3px solid $third-color;
+//         border-radius: 8px;
+//       }
+//     }
+//   }
+// }
+
 .sectionfooter {
   width: 100%;
   height: auto;
@@ -762,9 +1124,29 @@ header {
     .copyright {
       width: 50%;
       height: auto;
+      opacity: 0.8;
+      font-size: 16px;
       @include center();
       p {
         color: black;
+      }
+    }
+    @media only screen and (max-width: 700px) {
+      .copyright {
+        width: 60%;
+        font-size: 13px;
+      }
+    }
+    @media only screen and (max-width: 550px) {
+      .copyright {
+        width: 70%;
+        font-size: 12px;
+      }
+    }
+    @media only screen and (max-width: 400px) {
+      .copyright {
+        width: 75%;
+        font-size: 11px;
       }
     }
     .socialmedia {
@@ -774,12 +1156,51 @@ header {
       .socialmedia-logo {
         width: 35px;
         height: 35px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
         .logo-button {
           border: none;
           background-color: none;
         }
+      }
+      @media only screen and (max-width: 700px) {
+        .socialmedia-logo {
+          width: 25px;
+          height: 25px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+      }
+      @media only screen and (max-width: 550px) {
+        .socialmedia-logo {
+          width: 18px;
+          height: 18px;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+      }
+      @media only screen and (max-width: 400px) {
+        .socialmedia-logo {
+          width: 16px;
+          height: 16px;
+          margin-left: 4px;
+          margin-right: 4px;
+        }
+      }
+    }
+    @media only screen and (max-width: 700px) {
+      .socialmedia {
+        width: 40%;
+      }
+    }
+    @media only screen and (max-width: 550px) {
+      .socialmedia {
+        width: 30%;
+      }
+    }
+    @media only screen and (max-width: 400px) {
+      .socialmedia {
+        width: 20%;
       }
     }
   }

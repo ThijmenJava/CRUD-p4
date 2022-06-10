@@ -44,19 +44,6 @@ $row = $stmt->fetch();
     <section class="all-content-plek">
         <main class="main-content"> 
             <div class="buttons-nav">
-<<<<<<< HEAD
-                <button class="button-nav">Vakantie</button>
-                <button class="button-nav">Reviews</button>
-                <button class="button-nav">Contact</button> 
-            </div>
-            <hr>
-        </main>
-    </section>
-
-    <?php include("includes/footer.php"); ?>
-
-</body>
-=======
                 <button class="button-nav" id="vakantie">Vakantie</button>
                 <button class="button-nav" id="reviews">Reviews</button>
                 <button class="button-nav" id="contact">Contact</button> 
@@ -90,5 +77,4 @@ $row = $stmt->fetch();
 
 </body>
 <script src="js/userprofiles.js"></script>
->>>>>>> 70d99da86bf15642817b934d642e9c3d85f4b1bf
 </html>

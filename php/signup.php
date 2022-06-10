@@ -13,6 +13,7 @@ if (isset($_POST["submit-signup"])) {
     if (empty($email) || empty($naam) || empty($wachtwoord)) {
         $error = "You need to fill all forms!";
         echo "You need to fill all forms!";
+        redirect("../login.php");
     } else {
         $query = "SELECT * FROM users WHERE email = :email";
         $stmt = $conn->prepare($query);
@@ -31,9 +32,3 @@ if (isset($_POST["submit-signup"])) {
         }
     }
 }
-
-function printError(): string {
-    global $error;
-    return $error;
-}
-

@@ -2,6 +2,7 @@
 
 include("../includes/sessions.php");
 include("../includes/connect.php");
+include("../php/contactshow.php");
 
 global $conn;
 
@@ -37,7 +38,36 @@ $row = $stmt->fetch();
         </div>
     </section>
 
+    <section class="all-content-plek">
+        <main class="main-content"> 
+            <div class="buttons-nav">
+                <button class="button-nav" id="vakantie">Vakantie</button>
+                <button class="button-nav" id="geboekte">Geboekte</button>
+                <button class="button-nav" id="reviews">Reviews</button>
+                <button class="button-nav" id="contact">Contact</button> 
+            </div>
+            <hr>
+            <div class="content">
+                <div class="vakantie-content" id="vakantie-c">
+                 
+                </div>
+                <div class="geboekte-content" id="geboekte-c">
+
+                </div>
+                <div class="reviews-content" id="reviews-c">
+
+                </div>
+                <div class="contact-content" id="contact-c">
+                    <div class="contact-info">
+                        <?php showContact("SELECT * FROM contact ORDER BY contactID ASC"); ?>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
     <?php include("adminfooter.php"); ?>
 
 </body>
+<script src="../js/adminhome.js"></script>
 </html>

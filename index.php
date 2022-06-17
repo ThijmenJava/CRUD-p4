@@ -31,7 +31,7 @@
                             <input class="zoek-input" type="date" placeholder="" name="subject" required>
                             <label class="container" for="date"><p>Einddatum</p></label>
                             <input class="zoek-input" type="date" placeholder="" name="subject" required>
-                            <button class="submit-button" type="submit" name="verzenden">Verzenden</button>
+                            <input class="submit-button" type="submit" name="verzenden"></input>
                         </div>
                     </form>
                     </div>

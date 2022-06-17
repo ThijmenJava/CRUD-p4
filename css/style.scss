@@ -62,8 +62,11 @@ $second-color: #9fb4ff;
 $third-color: #ffb72b;
 $fourth-color: #99ffcd;
 $fifth-color: #ffe61b;
-$sixth-color: #2f86a6;
 $seventh-color: black;
+
+//background colors
+$background-one: #dff6ff;
+$background-two: #ffe5b4;
 
 .header-logo {
   background-image: url(../img/planelogo.png);
@@ -131,6 +134,7 @@ $seventh-color: black;
   width: 300px;
   font-size: 39px;
   padding-left: 30px;
+  font-weight: 600;
   color: $second-color;
 }
 @media only screen and (max-width: 1250px) {
@@ -154,7 +158,7 @@ $seventh-color: black;
 }
 
 header {
-  border-bottom: $fifth-color solid 6px;
+  border-bottom: $second-color solid 2px;
   nav {
     display: flex;
     width: 100%;
@@ -173,7 +177,7 @@ header {
         a {
           text-decoration: none;
           margin: 2px;
-          font-size: 22px;
+          font-size: 20px;
           width: 175px;
           height: 50px;
           padding: 8px;
@@ -183,23 +187,23 @@ header {
           cursor: pointer;
           &:hover {
             padding-bottom: 4px;
-            border-bottom: $second-color solid 3.5px;
+            border-bottom: $second-color solid 2px;
           }
           @media only screen and (max-width: 800px) {
             &:hover {
               padding-bottom: 3px;
-              border-bottom: $second-color solid 2.5px;
+              border-bottom: $second-color solid 1.5px;
             }
           }
           @media only screen and (max-width: 600px) {
             &:hover {
-              padding-bottom: 2px;
-              border-bottom: $second-color solid 2px;
+              padding-bottom: 3px;
+              border-bottom: $second-color solid 1px;
             }
           }
           @media only screen and (max-width: 400px) {
             &:hover {
-              padding-bottom: 1px;
+              padding-bottom: 3px;
               border-bottom: $second-color solid 1px;
             }
           }
@@ -207,36 +211,39 @@ header {
             color: rgb(213, 213, 213);
           }
         }
+        @media only screen and (max-width: 1286px) {
+          a {
+            margin: 2px;
+            font-size: 18px;
+            width: 175px;
+          }
+        }
         @media only screen and (max-width: 1000px) {
           a {
             margin: 2px;
-            font-size: 22px;
-            width: 175px;
-            // padding: 8px;
+            font-size: 16px;
+            width: 150px;
           }
         }
         @media only screen and (max-width: 800px) {
           a {
             margin: 2px;
-            font-size: 18px;
-            width: 150px;
-            // padding: 6px;
+            font-size: 14px;
+            width: 125px;
           }
         }
         @media only screen and (max-width: 600px) {
           a {
-            margin: 2px;
-            font-size: 14px;
-            width: 125px;
-            // padding: 4px;
+            margin: 1px;
+            font-size: 12px;
+            width: 100px;
           }
         }
         @media only screen and (max-width: 400px) {
           a {
-            margin: 2px;
+            margin: 1px;
             font-size: 10px;
-            width: 100px;
-            // padding: 2px;
+            width: 75px;
           }
         }
       }
@@ -280,43 +287,33 @@ header {
   }
   @media only screen and (max-width: 1200px) {
     nav {
-      // padding: 10px;
       padding-left: 15px;
       padding-right: 15px;
     }
   }
   @media only screen and (max-width: 1000px) {
     nav {
-      // padding: 8px;
       padding-left: 12px;
       padding-right: 12px;
     }
   }
   @media only screen and (max-width: 800px) {
     nav {
-      // padding: 6px;
       padding-left: 8px;
       padding-right: 8px;
     }
   }
   @media only screen and (max-width: 600px) {
     nav {
-      // padding: 4px;
       padding-left: 5px;
       padding-right: 5px;
     }
   }
   @media only screen and (max-width: 400px) {
     nav {
-      // padding: 2px;
       padding-left: 2px;
       padding-right: 2px;
     }
-  }
-}
-@media only screen and (max-width: 800px) {
-  header {
-    border-bottom: $fifth-color solid 4px;
   }
 }
 
@@ -384,7 +381,7 @@ header {
       .zoekbalk {
         width: 350px;
         height: 500px;
-        background-color: $first-color;
+        background-color: $background-one;
         border-radius: 24px;
         .zoeken-titel {
           @include center();
@@ -409,42 +406,18 @@ header {
             .submit-button {
               @include center();
               flex-direction: column;
-              border: 2px solid currentColor;
+              border: 2px solid black;
               border-radius: 25px;
+
               color: black;
-              overflow: hidden;
               padding: 12.5px;
               width: 175px;
-              position: relative;
-              text-decoration: none;
-              transition: 0.2s transform ease-in-out;
-              will-change: transform;
-              z-index: 0;
               cursor: pointer;
-
-              &::after {
-                background-color: $third-color;
-                border-radius: 3rem;
-                content: "";
-                display: block;
-                height: 100%;
-                width: 100%;
-                position: absolute;
-                left: 0;
-                top: 0;
-                transform: translate(-100%, 0) rotate(10deg);
-                transform-origin: top left;
-                transition: 0.2s transform ease-out;
-                will-change: transform;
-                z-index: -1;
-              }
-              &:hover::after {
-                transform: translate(0, 0);
-              }
+              transition-duration: 0.2s;
               &:hover {
-                border: 2px solid transparent;
+                border: 2px solid black;
                 color: black;
-                will-change: transform;
+                background-color: $third-color;
               }
             }
           }
@@ -459,43 +432,76 @@ header {
   .container {
     @include center();
     .opties {
-      width: 30%;
       display: flex;
       justify-content: right;
-      align-content: right;
+      align-items: right;
       flex-direction: column;
+      background-color: $background-one;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      padding-left: 25px;
+      border-radius: 25px;
+      margin-right: 25px;
+      padding-right: 15px;
+      .optie-titel {
+        display: flex;
+        justify-content: right;
+        align-items: right;
+        margin-top: 20px;
+      }
+      .container {
+        display: flex;
+        justify-content: right;
+        align-items: right;
+      }
       .optie {
-        border-radius: 8px;
-        width: 200px;
+        display: flex;
+        justify-content: right;
+        align-items: right;
+        flex-direction: row;
       }
       select {
         width: 200px;
-        border: $third-color 2px solid;
+        border: $second-color 2px solid;
+        border-radius: 25px;
+        height: 25px;
       }
       .border {
         width: 200px;
-        border: $third-color 2px solid;
+        border: $second-color 2px solid;
+        border-radius: 25px;
       }
     }
     .zoekopdracht {
       @include center();
       flex-direction: column;
-      width: 70%;
-      background-color: blue;
-      .vakanties {
-        width: 450px;
-        height: 350px;
-        background-color: red;
+      width: 50%;
+      background-color: rgba(50, 50, 50, 0.1);
+      position: relative;
+      .vakanties-img {
+        width: 100%;
+        height: 400px;
         display: flex;
-        align-items: left;
+        align-items: center;
         justify-content: left;
+        .booking-img {
+          width: 50%;
+          height: 50%;
+          background-image: url(../img/booking1.jpg);
+          background-size: cover;
+          @include center();
+        }
+        .vakanties {
+          display: flex;
+          flex-direction: column;
+        }
       }
     }
   }
 }
 
 .contact-nemen {
-  background-color: $first-color;
+  background-color: $background-one;
   height: 350px;
   @include center();
   width: 100%;
@@ -523,7 +529,7 @@ header {
         will-change: transform;
         z-index: 0;
         cursor: pointer;
-
+        background-color: $first-color;
         &::after {
           background-color: $second-color;
           border-radius: 3rem;
@@ -581,11 +587,12 @@ header {
   padding-top: 25px;
   padding-bottom: 50px;
   width: 100%;
+  font-size: 16px;
   .contact-page {
     border-radius: 12px;
     margin-bottom: 50px;
     margin-top: 50px;
-    background-color: $second-color;
+    background-color: $background-one;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
       rgba(0, 0, 0, 0.22) 0px 10px 10px;
     width: 600px;
@@ -607,6 +614,30 @@ header {
       @include margin_bottom();
     }
   }
+  @media only screen and (max-width: 700px) {
+    .contact-page {
+      margin-bottom: 30px;
+      margin-top: 30px;
+      padding: 30px;
+      width: 500px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .contact-page {
+      margin-bottom: 15px;
+      margin-top: 15px;
+      padding: 15px;
+      width: 450px;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .contact-page {
+      margin-bottom: 7.5px;
+      margin-top: 7.5px;
+      padding: 7.5px;
+      width: 300px;
+    }
+  }
   .contact-form {
     @include center();
     @include padding_bottom();
@@ -614,13 +645,20 @@ header {
     .contact-input {
       width: 200px;
       height: 45px;
-      border: $third-color solid 2px;
+      border: $second-color solid 1.5px;
       border-radius: 25px;
       padding-left: 13px;
       @include margin_bottom();
     }
+    @media only screen and (max-width: 600px) {
+      .contact-input {
+        width: 150px;
+        height: 42px;
+        padding-left: 10px;
+      }
+    }
     .textarea {
-      border: $third-color solid 2px;
+      border: $second-color solid 1.5px;
       border-radius: 25px;
       width: 400px;
       height: 200px;
@@ -631,166 +669,38 @@ header {
       @include margin_bottom();
     }
     .submit-button {
-      border: 2px solid currentColor;
+      border: 2px solid;
+      background-color: $first-color;
       border-radius: 25px;
       color: black;
       overflow: hidden;
-      padding: 1rem 2rem;
+      padding: 15px 30px;
       position: relative;
       text-decoration: none;
-      transition: 0.2s transform ease-in-out;
+      transition-duration: 0.2s;
       will-change: transform;
       z-index: 0;
       cursor: pointer;
 
-      &::after {
-        background-color: $third-color;
-        border-radius: 3rem;
-        content: "";
-        display: block;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        transform: translate(-100%, 0) rotate(10deg);
-        transform-origin: top left;
-        transition: 0.2s transform ease-out;
-        will-change: transform;
-        z-index: -1;
-      }
-      &:hover::after {
-        transform: translate(0, 0);
-      }
       &:hover {
-        border: 2px solid transparent;
-        color: black;
-        will-change: transform;
+        background-color: $second-color;
+        border: $first-color 2px solid;
       }
     }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .formulier-container {
+    padding-top: 15px;
+    padding-bottom: 35px;
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 500px) {
   .formulier-container {
-    padding-top: 15px;
-    padding-bottom: 35px;
-    width: 100%;
-    font-size: smaller;
-  }
-}
-
-.contact-opnemen {
-  background-color: $first-color;
-  height: 450px;
-  @include center();
-  width: 100%;
-  .container {
-    width: 850px;
-    .contact-opnemen-title {
-      @include center();
-    }
-    .contact-opnemen-p {
-      @include center();
-      margin-top: 25px;
-      @include margin_bottom();
-    }
-    .container {
-      @include center();
-      .naar-formulier {
-        border: 2px solid currentColor;
-        border-radius: 25px;
-        color: black;
-        overflow: hidden;
-        padding: 1rem 2rem;
-        position: relative;
-        text-decoration: none;
-        transition: 0.2s transform ease-in-out;
-        will-change: transform;
-        z-index: 0;
-        cursor: pointer;
-
-        &::after {
-          background-color: $second-color;
-          border-radius: 3rem;
-          content: "";
-          display: block;
-          height: 100%;
-          width: 100%;
-          position: absolute;
-          left: 0;
-          top: 0;
-          transform: translate(-100%, 0) rotate(10deg);
-          transform-origin: top left;
-          transition: 0.2s transform ease-out;
-          will-change: transform;
-          z-index: -1;
-        }
-        &:hover::after {
-          transform: translate(0, 0);
-        }
-        &:hover {
-          border: 2px solid transparent;
-          color: black;
-          will-change: transform;
-        }
-      }
-    }
-    .container-orange {
-      @include center();
-      .contact-1,
-      .contact-2 {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 10px;
-        background-color: $second-color;
-        border-radius: 24px;
-        width: 175px;
-        height: 150px;
-        margin-left: 15px;
-        margin-right: 15px;
-        .orange {
-          padding-bottom: 10px;
-          @include center();
-          p {
-            @include center();
-          }
-          &:hover {
-            color: $third-color;
-          }
-        }
-      }
-      @media only screen and (max-width: 850px) {
-        .contact-1,
-        .contact-2 {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-    }
-    @media only screen and (max-width: 600px) {
-      .container-orange {
-        display: flex;
-        flex-direction: column;
-      }
-    }
-  }
-  @media only screen and (max-width: 900px) {
-    .container {
-      width: 850px;
-    }
-  }
-}
-@media only screen and (max-width: 900px) {
-  .contact {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    width: 175px;
-    height: 150px;
-    margin-left: 15px;
-    margin-right: 15px;
-    display: flex;
-    flex-direction: column;
+    padding-top: 7px;
+    padding-bottom: 15px;
+    font-size: 12px;
   }
 }
 
@@ -809,16 +719,11 @@ header {
   border-top-right-radius: 5px;
 }
 
-.rotate {
-  transform: rotate(90deg);
-}
-
 .margin {
   margin-top: 10px;
 }
 
 .contact-opnemen {
-  // box-shadow: 0px -15px 25px -25px;
   background-color: $first-color;
   height: 350px;
   @include center();
@@ -832,6 +737,13 @@ header {
       @include center();
       margin-top: 25px;
       @include margin_bottom();
+      width: 100%;
+    }
+    @media only screen and (max-width: 700px) {
+      .contact-opnemen-p {
+        width: 100%;
+        font-size: smaller;
+      }
     }
     .container {
       @include center();
@@ -874,30 +786,74 @@ header {
         }
       }
     }
-    .container-orange {
+    .container-blue {
       @include center();
       .contact {
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 10px;
-        background-color: $second-color;
+        background-color: $background-one;
         border-radius: 24px;
         width: 175px;
         height: 150px;
         margin-left: 15px;
         margin-right: 15px;
-        .orange {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 16px;
+        .blue {
           padding-bottom: 10px;
           @include center();
           p {
             @include center();
           }
           &:hover {
-            color: $third-color;
+            color: $second-color;
           }
         }
       }
+      @media only screen and (max-width: 900px) {
+        .contact {
+          padding-left: 5px;
+          padding-right: 5px;
+          padding-top: 5px;
+          width: 150px;
+          height: 125px;
+          margin-left: 10px;
+          margin-right: 10px;
+          font-size: 12px;
+        }
+      }
+      @media only screen and (max-width: 700px) {
+        .container {
+          display: flex;
+          flex-direction: column;
+          margin: 0;
+          margin-top: 20px;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .container-orange {
+          display: flex;
+          flex-direction: column;
+        }
+      }
     }
+  }
+  @media only screen and (max-width: 900px) {
+    .container {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .container {
+      margin: 20px;
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .contact-opnemen {
+    height: 500px;
   }
 }
 
@@ -969,14 +925,13 @@ header {
                 font-size: 18px;
                 border: none;
                 border-radius: 5px;
-                background-color: $third-color;
+                background-color: $second-color;
                 transition-duration: 0.4s;
                 border: 3px solid transparent;
-
+                cursor: pointer;
                 &:hover {
                   background-color: white;
-                  border: 3px solid $third-color;
-                  cursor: pointer;
+                  border: 3px solid $second-color;
                 }
               }
             }
@@ -1014,13 +969,13 @@ header {
               font-size: 18px;
               border: none;
               border-radius: 5px;
-              background-color: $third-color;
+              background-color: $second-color;
               transition-duration: 0.4s;
               border: 3px solid transparent;
 
               &:hover {
                 background-color: white;
-                border: 3px solid $third-color;
+                border: 3px solid $second-color;
                 cursor: pointer;
               }
             }
@@ -1346,79 +1301,39 @@ header {
   }
 }
 
-// .zoekblak {
-//   width: 900px;
-//   height: 275px;
-//   background-color: #f7f7f7;
-//   border-radius: 40px;
-//   .zoek-titel {
-//     @include block(60px, 100%, transparent);
-//     @include center();
-//     h2 {
-//       color: black;
-//       font-size: 35px;
-//     }
-//   }
-
-// .plek-form {
-//   @include block(240px, 100%, transparent);
-//   .container-labels {
-//     @include block(30px, 100%, transparent);
-//     display: flex;
-//     .labels-plek {
-//       @include block(100%, 50%, transparent);
-//       @include center();
-//       h3 {
-//         @include block(35px, 90px, $third-color);
-//         @include center();
-//         font-size: 25px;
-//         color: black;
-//       }
-//     }
-//   }
-
-//   .container-input {
-//     @include block(auto, 100%, transparent);
-//     display: flex;
-//     flex-wrap: wrap;
-//     .input-plek {
-//       @include block(auto, 50%, transparent);
-//       @include center_high();
-//       .black {
-//         @include block(50px, 50px, transparent);
-//         @include center();
-//         background-color: $third-color;
-//         .vliegtuig-img {
-//           width: 90%;
-//           height: 90%;
-//         }
-//         .calander-size {
-//           font-size: 35px;
-//         }
-//       }
-//       .input {
-//         @include remove_input_style();
-//         width: 70%;
-//         height: 50px;
-//         border-color: $third-color;
-//         border: 3.3px solid $third-color;
-//       }
-//     }
-//   }
-
-//     .container-submit {
-//       @include block(50px, 100%, transparent);
-//       @include center();
-//       .vlucht-submit {
-//         @include remove_input_style();
-//         width: 250px;
-//         height: 40px;
-//         border: 3.3px solid $third-color;
-//         border-radius: 8px;
-//       }
-//     }
-//   }
-// }
+.over-ons {
+  width: 100%;
+  margin-top: 25px;
+  .informatie {
+    width: 100%;
+    height: 200px;
+    padding: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    .informatie-titel {
+      color: $second-color;
+      @include center();
+      padding-bottom: 25px;
+    }
+  }
+  .informatie-over-ons {
+    width: 100%;
+    height: 500px;
+    .tt {
+      .container {
+        @include center();
+        .naam {
+          padding-left: 10%;
+          padding-right: 10%;
+          .naam-titel {
+            color: $third-color;
+            padding-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
 
 .sectionfooter {
   width: 100%;
@@ -1427,12 +1342,12 @@ header {
     display: flex;
     width: 100%;
     height: 75px;
-    border-top: #ffe61b solid 6px;
+    border-top: $second-color solid 2px;
     .copyright {
       width: 50%;
       height: auto;
       opacity: 0.8;
-      font-size: 16px;
+      font-size: 14px;
       @include center();
       p {
         color: black;

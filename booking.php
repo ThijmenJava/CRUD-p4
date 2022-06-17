@@ -12,11 +12,11 @@
     <title>Booking</title>
 </head>
     <body>
-<?php include_once('includes/header.php'); ?>
+        <?php include_once('includes/header.php'); ?>
         <div class="booking">
             <div class="container">
                 <div class="opties">
-                    <h4 class="optie">Vakantietype</h4>
+                    <h4 class="optie-titel">Vakantietype</h4>
                     <select class="select">
                         <option class="optie">Wintersport</option>
                         <option class="optie">Zomervakantie</option>
@@ -26,17 +26,19 @@
                         <option class="optie">Last-Minute</option>
                     </select>
                 
-                    <h4 class="optie">Reisduur</h4>
+                    <h4 class="optie-titel">Reisduur</h4>
                         <input type="text" class="border"></input>
 
-                    <h4 class="optie">Aantal sterren</h4>
-                        <input type="checkbox" class="optie">1</input>
-                        <input type="checkbox" class="optie">2</input>
-                        <input type="checkbox" class="optie">3</input>
-                        <input type="checkbox" class="optie">4</input>
-                        <input type="checkbox" class="optie">5</input>
+                    <h4 class="optie-titel">Aantal sterren</h4>
+                    <div class="container">
+                        <input id="optie" type="radio" class="optie" name="check" onclick="onlyOne(this)">1</input>
+                        <input id="optie" type="radio" class="optie" name="check" onclick="onlyOne(this)">2</input>
+                        <input id="optie" type="radio" class="optie" name="check" onclick="onlyOne(this)">3</input>
+                        <input id="optie" type="radio" class="optie" name="check" onclick="onlyOne(this)">4</input>
+                        <input id="optie" type="radio" class="optie" name="check" onclick="onlyOne(this)">5</input>
+                    </div>
 
-                    <h4 class="optie">Accomodatietype</h4>
+                    <h4 class="optie-titel">Accomodatietype</h4>
                         <select>
                             <option class="optie">Hotel</option>
                             <option class="optie">Camping</option>
@@ -45,14 +47,23 @@
                             <option class="optie">Aparthotel</option>
                         </select>
                     
-                    <h4 class="optie">Budget</h4>
+                    <h4 class="optie-titel">Budget</h4>
                         <input type="number" class="border"></input>
                 </div>
-                <div class="zoekopdracht">
-                    <div class="vakanties"></div>
+                <div class='zoekopdracht'>
+                    <div class='vakanties-img'>
+                        <div class="booking-img">
+                            <img src="booking1.jpg" alt="">
+                        </div>
+                        <div class="vakanties">
+                            <div class="review">Review</div>
+                            <div class="naam">Naam</div>
+                            <div class="prijs">Prijs</div>
+                        </div>
+                    </div>
                 </div>
                 </div>
             </div>
-<?php include_once('includes/footer.php'); ?>
+        <?php include_once('includes/footer.php'); ?>
     </body>
 </html>

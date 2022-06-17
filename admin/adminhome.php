@@ -33,13 +33,20 @@ $row = $stmt->fetch();
                 <img class="profile-image" src=<?php print_r("../".$row['image']) ?> alt="">
             </div>
             <div class="profile-items-plek">
+                <div class="profile-info-plek">
+                    <div class="naam-plek">
+                        <div class="label"><p>Naam,</p></div>
+                        <div class="naam"><p><?php print_r($row['naam']) ?></p></div>
+                        <div class="email"></div>
+                    </div>
+                </div>
+                <div class="profile-info-plek">
 
+                </div>
             </div>
         </div>
     </section>
 
-<<<<<<< HEAD
-=======
     <section class="all-content-plek">
         <main class="main-content"> 
             <div class="buttons-nav">
@@ -51,7 +58,9 @@ $row = $stmt->fetch();
             <hr>
             <div class="content">
                 <div class="vakantie-content" id="vakantie-c">
-                 
+                    <div class="vakantie-button-place">
+                        <button class="button-vakantie" id="vakantie-knop">+ Create Vakantie</button>
+                    </div>
                 </div>
                 <div class="geboekte-content" id="geboekte-c">
 
@@ -61,14 +70,50 @@ $row = $stmt->fetch();
                 </div>
                 <div class="contact-content" id="contact-c">
                     <div class="contact-info">
-                        <?php showContact("SELECT * FROM contact ORDER BY contactID ASC"); ?>
+                        <?php showContact("SELECT * FROM contact ORDER BY contactID ASC", "../includes/connect.php"); ?>
                     </div>
                 </div>
             </div>
         </main>
     </section>
 
->>>>>>> 70d99da86bf15642817b934d642e9c3d85f4b1bf
+    <section id="create-section" class="create-section">
+        <div id="form-plek" class="create-form-plek">
+            <div class="titel-plek">
+                <h2>Create Vakantie</h2>
+            </div>
+            <form class="form-content" action="../php/createvakantie.php" method="POST" enctype="multipart/form-data">
+                <div class="input-container">
+                    <input class="input-style" placeholder="Land" type="text" name="land" required>
+                </div>
+                <div class="input-container">
+                    <input class="input-style" type="date" name="startdatum" required>
+                </div>
+                <div class="input-container">
+                    <input class="input-style" type="date" name="einddatum" required>
+                </div>
+                <div class="input-container">
+                    <input class="input-style" placeholder="Prijs" type="number" name="kosten" required>
+                </div>
+                <div class="input-container">
+                    <input class="input-style" type="text" placeholder="Titel" name="titel">
+                </div>
+                <div class="input-container">
+                    <input class="input-style" type="text" name="kleinebeschrijving" placeholder="Kleine beschrijving" required>
+                </div>
+                <div class="input-container">
+                    <input class="input-style" type="text" name="beschrijving" placeholder="Beschrijving" required>
+                </div>
+                <div class="input-container">
+                    <input type="file" name="file" required>
+                </div>
+                <div class="input-container">
+                    <input class="input-style" type="submit" name="submit"> 
+                </div>
+            </form>
+        </div>
+    </section>
+
     <?php include("adminfooter.php"); ?>
 
 </body>

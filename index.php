@@ -22,18 +22,18 @@
                             <h1>Vakantie zoeken</h1>
                         </div>
                         <form class="zoek-form" action="php/index.php" method="post">
-                            <div class="container">
-                                <label class="container" for="name"><p>Bestemming</p></label>
-                                <input class="zoek-input" type="text" placeholder="Land..." name="name" required>
-                                <label class="container" for="person"><p>Aantal personen</p></label>
-                                <input class="zoek-input" type="number" placeholder="Aantal personen..." name="" required>
-                                <label class="container" for="date"><p>Begindatum</p></label>
-                                <input class="zoek-input" type="date" placeholder="" name="subject" required>
-                                <label class="container" for="date"><p>Einddatum</p></label>
-                                <input class="zoek-input" type="date" placeholder="" name="subject" required>
-                                <button class="submit-button" type="submit" name="verzenden">Verzenden</button>
-                            </div>
-                        </form>
+                        <div class="container">
+                            <label class="container" for="name"><p>Bestemming</p></label>
+                            <input class="zoek-input" type="text" placeholder="Land..." name="name" required>
+                            <label class="container" for="person"><p>Aantal personen</p></label>
+                            <input class="zoek-input" type="number" placeholder="Aantal personen..." name="" required>
+                            <label class="container" for="date"><p>Begindatum</p></label>
+                            <input class="zoek-input" type="date" placeholder="" name="subject" required>
+                            <label class="container" for="date"><p>Einddatum</p></label>
+                            <input class="zoek-input" type="date" placeholder="" name="subject" required>
+                            <input class="submit-button" type="submit" name="verzenden"></input>
+                        </div>
+                    </form>
                     </div>
                 </div>
             </div>

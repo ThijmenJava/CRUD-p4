@@ -29,15 +29,14 @@
                     <form class="contact-form" action="php/contactbackend.php" method="POST">
                         <div class="container">
                             <label for="name"><p>Volledige naam</p></label>
-                            <input class="contact-input" type="text" placeholder="Voornaam..." name="name" required>
+                            <input class="contact-input" type="text" placeholder="Volledige naam..." name="name" required>
                             <label for="name"><p>E-mail</p></label>
-                            <input class="contact-input" type="email" placeholder="Achternaam..." name="email" required>
+                            <input class="contact-input" type="email" placeholder="E-mail..." name="email" required>
                             <label for="subject"><p>Onderwerp</p></label>
                             <input class="contact-input" type="text" placeholder="Onderwerp..." name="subject" required>
                             <label for="subject"><p>Beschrijving</p></label>
                             <textarea class="textarea" name="textarea" id="textarea" cols="30" rows="50" placeholder="Beschrijving..." style="resize: none" required></textarea>
                             <input class="submit-button" type="submit" name="submit" value="Verzenden">
-                            <!-- <button class="submit-button" type="submit" name="submit">Verzenden</button> -->
                         </div>
                     </form>
                 </div>
@@ -46,22 +45,26 @@
                 <div class="container">
                     <h1 class="contact-opnemen-title">Contact opnemen</h1>
                     <p class="contact-opnemen-p">Wil je contact met ons opnemen? Je kunt ons bereiken via de onderstaande middelen.</p>
-                    <div class="container-orange">
-                        <div class="contact-1">
-                            <a class="orange" href="afspraak_maken">Afpraak maken</a>
-                            <p>Maak online een afspraak in het reisbureau.</p>
+                    <div class="container-blue">
+                        <div class="container">
+                            <div class="contact">
+                                <a class="blue" href="afspraak_maken">Afpraak maken</a>
+                                <p>Maak online een afspraak in het reisbureau.</p>
+                            </div>
+                            <div class="contact">
+                                <a class="blue" href="">Bel ons - 088 - 555 4999</a>
+                                <p>Maandag t/m zaterdag bereikbaar.</p>
+                            </div>
                         </div>
-                        <div class="contact-1">
-                            <a class="orange" href="">Bel ons - 088 - 555 4999</a>
-                            <p>Maandag t/m zaterdag bereikbaar.</p>
-                        </div>
-                        <div class="contact-2">
-                            <a class="orange" href="#formulier">Mail ons</a>
-                            <p>Je kunt 24 uur per dag je vragen stellen.</p>
-                        </div>
-                        <div class="contact-2">
-                            <a class="orange" href="zoek_uw_reisbureau">Zoek uw reisbureau</a>
-                            <p>Met de reisbureaus zijn wij altijd in de buurt.</p>
+                        <div class="container">
+                            <div class="contact">
+                                <a class="blue" href="#formulier">Mail ons</a>
+                                <p>Je kunt 24 uur per dag je vragen stellen.</p>
+                            </div>
+                            <div class="contact">
+                                <a class="blue" href="zoek_uw_reisbureau">Zoek uw reisbureau</a>
+                                <p>Met de reisbureaus zijn wij altijd in de buurt.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

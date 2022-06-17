@@ -1043,9 +1043,30 @@ header {
     display: flex;
 
     .profile-items-plek {
+      display: flex;
       height: 100%;
       width: 70%;
-      background-color: #ffb72b;
+      .profile-info-plek {
+        @include center();
+        height: 100%;
+        width: 100%;
+        .naam-plek {
+          width: 50%;
+          height: 75%;
+
+          .label {
+            @include center();
+            width: 100%;
+            height: 20px;
+          }
+
+          .naam {
+            @include center();
+            width: 100%;
+            height: 20px;
+          }
+        }
+      }
 
       .buttons-nav {
         width: 100%;
@@ -1082,8 +1103,26 @@ header {
       flex: 1;
       .vakantie-content {
         display: block;
-        @include block(100%, 100%, blue);
+        @include block(100%, 100%, transparent);
         flex: 1;
+        .vakantie-button-place {
+          @include block(50px, 100%, transparent);
+          @include center();
+          .button-vakantie {
+            @include remove_input_style();
+            height: 40px;
+            width: 175px;
+            transition-duration: 0.35s;
+            border-radius: 8px;
+            font-size: 20px;
+
+            &:hover {
+              background-color: #9fb4ff;
+              border-radius: 8px;
+              cursor: pointer;
+            }
+          }
+        }
       }
       .geboekte-content {
         display: none;
@@ -1141,6 +1180,56 @@ header {
           background-color: #9fb4ff;
           border-radius: 8px;
           cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  .contact-info {
+    @include center();
+  }
+}
+
+.create-section {
+  @include block(100%, 100%, transparent);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(14, 14, 14, 0.8);
+  .create-form-plek {
+    @include block(560px, 400px, white);
+    display: none;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    .titel-plek {
+      @include center();
+      width: 100%;
+      height: 50px;
+    }
+
+    .form-content {
+      width: 100%;
+      height: 400px;
+      .input-container {
+        @include center();
+        width: 100%;
+        height: 45px;
+        margin-top: 10px;
+        .input-style {
+          @include remove_input_style();
+          background-color: white;
+          height: 40px;
+          width: 250px;
+          border: 3px solid $third-color;
+          border-radius: 25px;
+          padding-left: 15px;
+          padding-right: 15px;
+          font-size: 15px;
         }
       }
     }
@@ -1241,12 +1330,10 @@ header {
     .profile-items-plek {
       height: 100%;
       width: 70%;
-      background-color: #ffb72b;
-
-      .buttons-nav {
-        width: 100%;
-        height: 70px;
-        background-color: #2f86a6;
+      .profile-info-plek {
+        width: 50%;
+        height: 100%;
+        background-color: #9fb4ff;
       }
     }
 

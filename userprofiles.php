@@ -67,11 +67,11 @@ $row = $stmt->fetch();
         </main>
     </section>
 
-    <section class="review-add-plek">
+    <!-- <section class="review-add-plek">
         <div class="review-div">
 
         </div>
-    </section>
+    </section> -->
 
     <?php include("includes/footer.php"); ?>
 

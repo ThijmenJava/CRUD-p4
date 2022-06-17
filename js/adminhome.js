@@ -7,6 +7,10 @@ const geboektediv = document.querySelector("#geboekte-c");
 const reviewsdiv = document.querySelector("#reviews-c");
 const contactdiv = document.querySelector("#contact-c");
 
+const createVakantieButton = document.querySelector("#vakantie-knop");
+const vakantiesection = document.querySelector("#create-section");
+const vakantieformplek = document.querySelector("#form-plek");
+
 vakantieButton.addEventListener("click", (event) => {
   event.preventDefault();
   vakantiediv.style.display = "block";
@@ -38,3 +42,16 @@ contactButton.addEventListener("click", (event) => {
   reviewsdiv.style.display = "none";
   contactdiv.style.display = "block";
 });
+
+createVakantieButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  vakantiesection.style.display = "flex";
+  vakantieformplek.style.display = "block";
+});
+
+window.onclick = (event) => {
+  if (event.target === vakantiesection) {
+    vakantiesection.style.display = "none";
+    vakantieformplek.style.display = "none";
+  }
+};

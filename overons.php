@@ -28,11 +28,11 @@
                         <div class="container">
                             <div class="naam">
                                 <h3 class="naam-titel">Thijmen Lemmens</h3>
-                                <p class="naam-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolorem aspernatur repudiandae sequi?</p>
+                                <p class="naam-p">Ik ben Thijmen Lemmens ik zit op Roc Nijmegen leerjaar 1. Ik heb de back-end van deze website gemaakt.</p>
                             </div>
                             <div class="naam">
                                 <h3 class="naam-titel">Thijs Heerze</h3>
-                                <p class="naam-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel saepe a iusto dolor!</p>
+                                <p class="naam-p">Ik ben Thijs Heerze, ik zit op het Roc Nijmegen leerjaar 1. Ik heb de front-end van de website gemaakt.</p>
                             </div>
                         </div>
                             <div class="container-contact">

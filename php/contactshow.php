@@ -14,7 +14,7 @@ function showContact($query, $path) {
                 echo "</div>";
                 echo "<div class='send-by center'>Email: {$value["email"]}</div>";
                 echo "<div class='send-by center'>Onderwerp: {$value["onderwerp"]}</div>";
-                echo "<div class='textarea-plek'><textarea class='textarea-content'>{$value["bericht"]}</textarea></div>";
+                echo "<div class='textarea-plek'><textarea readonly class='textarea-content'>{$value["bericht"]}</textarea></div>";
                 echo "<div class='button-plek'><a class='a-tag-container' href='../php/deletecontact.php?ID={$value["contactID"]}'><button class='button-style'>Delete</button></a></div>";
             echo "</div>";
         }

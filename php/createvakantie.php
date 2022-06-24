@@ -14,10 +14,10 @@ if(isset($_POST["submit"])) {
     $kleinebeschrijving = $_POST['kleinebeschrijving'];
     $beschrijving = $_POST['beschrijving'];
     $image = $_FILES['file'];
-    move_uploaded_file($image['tmp_name'], "../img/profileimg/".$image['name']);
+    move_uploaded_file($image['tmp_name'], "../img/vakantieimg/".$image['name']);
 
     $query = "INSERT INTO reizen(land, startdatum, einddatum, kosten, titel, kleinebeschrijving, beschrijving, image) 
-    VALUES (:land, :startdatum, :einddatum, :kosten, :titel, :kleinebeschrijving, :beschrijving, '../img/profileimg/{$image['name']}')";
+    VALUES (:land, :startdatum, :einddatum, :kosten, :titel, :kleinebeschrijving, :beschrijving, 'img/vakantieimg/{$image['name']}')";
     $stmt = $conn->prepare($query);
     $stmt->bindParam(":land", $land);
     $stmt->bindParam(":startdatum", $startdatum);

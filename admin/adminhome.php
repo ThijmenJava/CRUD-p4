@@ -3,6 +3,7 @@
 include("../includes/sessions.php");
 include("../includes/connect.php");
 include("../php/contactshow.php");
+include("../php/vakantieshowtable.php");
 
 global $conn;
 
@@ -60,6 +61,26 @@ $row = $stmt->fetch();
                 <div class="vakantie-content" id="vakantie-c">
                     <div class="vakantie-button-place">
                         <button class="button-vakantie" id="vakantie-knop">+ Create Vakantie</button>
+                    </div>
+                    <div class="table-container">
+                        <table class="border-table">
+                            <tr class="border-bottom-table">
+                                <th>Reis-ID</th>
+                                <th>Land</th>
+                                <th>StartDatum</th>
+                                <th>EindDatum</th>
+                                <th>Kosten</th>
+                                <th>Titel</th>
+                                <th>personen</th>
+                                <th>KleineBeschrijving</th>
+                                <th>Beschrijving</th>
+                                <th>Image</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+                            </tr>
+    
+                            <?php showVakantieTable(); ?>
+                        </table>
                     </div>
                 </div>
                 <div class="geboekte-content" id="geboekte-c">

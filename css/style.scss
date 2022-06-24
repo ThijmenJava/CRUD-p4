@@ -419,73 +419,122 @@ header {
   }
 }
 
-.booking {
+.booking-section {
+  display: flex;
+  min-height: 85vh;
   width: 100%;
-  .container {
-    @include center();
-    .opties {
+  .content-booking {
+    display: flex;
+    width: 100%;
+    min-height: 85vh;
+    .booking-plek {
       display: flex;
-      justify-content: right;
-      align-items: right;
-      flex-direction: column;
-      background-color: $background-one;
-      padding-top: 25px;
-      padding-bottom: 25px;
-      padding-left: 25px;
-      border-radius: 25px;
-      margin-right: 25px;
-      padding-right: 15px;
-      .optie-titel {
+      flex-wrap: wrap;
+      @include block(auto, 70%, transparent);
+      padding: 25px;
+      .vakantie-plek {
         display: flex;
-        justify-content: right;
-        align-items: right;
-        margin-top: 20px;
-      }
-      .container {
-        display: flex;
-        justify-content: right;
-        align-items: right;
-      }
-      .optie {
-        display: flex;
-        justify-content: right;
-        align-items: right;
-        flex-direction: row;
-      }
-      select {
-        width: 200px;
-        border: $second-color 1.5px solid;
-        border-radius: 25px;
-        height: 25px;
-      }
-      .border {
-        width: 200px;
-        border: $second-color 1.5px solid;
-        border-radius: 25px;
+        width: 500px;
+        height: 250px;
+        border: 5px solid $third-color;
+        border-radius: 15px;
+        margin-right: 10px;
+        .blok-1 {
+          width: 40%;
+          height: 100%;
+          .foto {
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+          }
+        }
+        .blok-2 {
+          width: 60%;
+          height: 100%;
+          .titel {
+            @include center();
+            width: 100%;
+            height: 30px;
+          }
+          .land-titel {
+            @include center();
+            width: 100%;
+            height: 20px;
+            .land-font {
+              color: lightgray;
+              font-weight: 300;
+            }
+          }
+          .info-plek {
+            padding: 7px;
+            height: 150px;
+            width: 100%;
+          }
+          .util-plek {
+            display: flex;
+            width: 100%;
+            height: 40px;
+            .prijs-plek {
+              @include center();
+              height: 100%;
+              width: 120px;
+              .geld-font {
+                font-size: 25px;
+              }
+            }
+            .button-plek {
+              @include center();
+              height: 100%;
+              width: 250px;
+              .button-style {
+                background-color: #ff7801;
+                width: 140%;
+                height: 30px;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
       }
     }
-    .zoekopdracht {
-      @include center();
-      flex-direction: column;
-      width: 50%;
-      background-color: rgba(50, 50, 50, 0.1);
-      position: relative;
-      .vakanties-img {
-        width: 100%;
+    .form-plek {
+      display: flex;
+      justify-content: center;
+      @include block(100%, 30%, transparent);
+      padding-top: 80px;
+      .form-block {
+        position: fixed;
+        width: 300px;
         height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: left;
-        .booking-img {
-          width: 50%;
-          height: 50%;
-          background-image: url(../img/booking1.jpg);
-          background-size: cover;
-          @include center();
-        }
-        .vakanties {
-          display: flex;
-          flex-direction: column;
+        background-color: $background-one;
+        border-radius: 25px;
+        .input-plek {
+          margin-top: 5px;
+          width: 100%;
+          height: 60px;
+          background-color: transparent;
+          .input {
+            @include center();
+            width: 100%;
+            height: 40px;
+            .input-veld {
+              @include remove_input_style();
+              background-color: white;
+              height: 25px;
+              width: 70%;
+              border: 3px solid $second-color;
+              border-radius: 5px;
+            }
+          }
+          .label-plek {
+            @include center();
+            width: 100%;
+            height: 20px;
+            .font-label {
+              font-size: 20px;
+            }
+          }
         }
       }
     }
@@ -567,6 +616,25 @@ header {
       width: 250px;
     }
   }
+}
+
+.table-container {
+  @include center();
+  height: 100%;
+  width: 100%;
+}
+
+.border-table {
+  border: 2px solid lightgray;
+}
+
+.border-bottom-table {
+  margin: 5px;
+  border-bottom: 2px solid lightgray;
+}
+
+.small-input {
+  width: 50px;
 }
 
 .formulier-container {

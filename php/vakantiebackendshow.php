@@ -32,7 +32,7 @@ function showVakantie() {
     $stmt->execute();
     if(!empty($stmt)) {
         foreach($stmt as $value) {
-          echo "<div class='vakantie-plek'>";
+          echo "<div class='vakantie-plek margin'>";
             echo "<div class='blok-1'>";
                 echo "<img class='foto' src='{$value['image']}' alt=''>";
             echo "</div>";

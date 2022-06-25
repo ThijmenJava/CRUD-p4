@@ -1736,3 +1736,136 @@ header {
     }
   }
 }
+
+.vakantieinfo-section {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  .blok1 {
+    width: 40%;
+    height: 80vh;
+    .land-naam {
+      height: 10vh;
+      width: 100%;
+      .titel-blok {
+        @include center();
+        width: 100%;
+        height: 5vh;
+      }
+      .land-blok {
+        @include center_high();
+        width: 100%;
+        height: 5vh;
+        .land-titel {
+          color: lightgray;
+          font-size: 20px;
+        }
+      }
+    }
+    .img-plek {
+      @include center_high();
+      height: 70vh;
+      width: 100%;
+      .img {
+        width: 60%;
+        height: 90%;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .blok2 {
+    display: flex;
+    width: 60%;
+    height: 80vh;
+
+    .blok-info {
+      height: 80vh;
+      width: 50%;
+    }
+    .blok-boeken {
+      height: 80vh;
+      width: 50%;
+      .boek-plek {
+        @include center();
+        width: 100%;
+        height: 40vh;
+        .boek-blok {
+          width: 80%;
+          height: 35vh;
+          border: 2px solid lightgray;
+          border-radius: 5px;
+          .kosten-plek {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            border-bottom: 2px solid lightgray;
+            .kosten-titel {
+              margin-right: 20px;
+              font-size: 20px;
+            }
+          }
+          .text-plek {
+            @include center();
+            width: 100%;
+            height: 40px;
+            .text-font {
+              font-size: 15px;
+              color: lightgray;
+            }
+          }
+          .datum-plek {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            .single-plek {
+              @include center();
+              width: 50%;
+              height: 50px;
+              .datum {
+                margin-left: 10px;
+                font-size: 15px;
+              }
+              .calander {
+                font-size: 20px;
+              }
+            }
+          }
+          .button-plek {
+            @include center();
+            width: 100%;
+            height: 50px;
+            .button {
+              cursor: pointer;
+              @include remove_input_style();
+              height: 30px;
+              width: 135px;
+              background-color: #ff7801;
+              border-radius: 5px;
+            }
+          }
+          .extra-info {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            .single-plek {
+              @include center();
+              width: 50%;
+              height: 50px;
+              .info-titel {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+      .review-plek {
+        width: 100%;
+        height: 40vh;
+        background-color: blue;
+      }
+    }
+  }
+}

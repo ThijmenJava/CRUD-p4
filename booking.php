@@ -1,7 +1,5 @@
 <?php
-
 include("php/vakantiebackendshow.php");
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +26,7 @@ include("php/vakantiebackendshow.php");
                                 <h5 class="font-label">Bestemming</h5>
                             </div>
                             <div class="input">
-                                <input class="input-veld" type="text" name="land" placeholder="Kies Land">
+                                <input class="input-veld" type="text" name="land" placeholder="Bestemming">
                             </div>
                         </div>
                         <div class="input-plek">
@@ -52,12 +50,28 @@ include("php/vakantiebackendshow.php");
                             </div>
                         </div>
                         <div class="input-plek">
-                            <input class="" type="submit" name="submit" value="Zoek">
+                            <div class="label-plek">
+                                <h5 class="font-label">Startdatum</h5>
+                            </div>
+                            <div class="input">
+                                <input class="input-veld" type="date" name="datum" placeholder="Startdatum">
+                            </div>
+                        </div>
+                        <div class="input-plek">
+                            <div class="label-plek">
+                                <h5 class="font-label">Einddatum</h5>
+                            </div>
+                            <div class="input">
+                                <input class="input-veld" type="date" name="datum" placeholder="Einddatum">
+                            </div>
+                        </div>
+                        <div class="input-plek">
+                            <input class="booking-input" type="submit" name="submit" value="Zoek">
                         </div>
                     </form>
                 </div>
                 <div class="booking-plek">
-                    <?php showVakantie(); ?>    
+                    <?php showVakantie(); ?>
                 </div>
             </div>
         </section>

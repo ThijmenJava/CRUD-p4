@@ -4,6 +4,8 @@ include("../includes/sessions.php");
 include("../includes/connect.php");
 include("../php/contactshow.php");
 include("../php/vakantieshowtable.php");
+include("../php/reviewshowbackend.php");
+include("../php/showbookingbackend.php");
 
 global $conn;
 
@@ -36,9 +38,6 @@ $row = $stmt->fetch();
             <div class="profile-items-plek">
                 <div class="profile-info-plek">
                     <div class="naam-plek">
-                        <div class="label"><p>Naam,</p></div>
-                        <div class="naam"><p><?php print_r($row['naam']) ?></p></div>
-                        <div class="email"></div>
                     </div>
                 </div>
                 <div class="profile-info-plek">
@@ -84,14 +83,18 @@ $row = $stmt->fetch();
                     </div>
                 </div>
                 <div class="geboekte-content" id="geboekte-c">
-
+                    <div class="content-booking">
+                        <?php showBooking("SELECT * FROM bookingen"); ?>
+                    </div>
                 </div>
                 <div class="reviews-content" id="reviews-c">
-
+                    <div class="review-content-back">
+                        <?php showReview("SELECT * FROM recensie"); ?>
+                    </div>
                 </div>
                 <div class="contact-content" id="contact-c">
                     <div class="contact-info">
-                        <?php showContact("SELECT * FROM contact ORDER BY contactID ASC", "../includes/connect.php"); ?>
+                        <?php showContact("SELECT * FROM contact ORDER BY contactID ASC", "../includes/connect.php", 0); ?>
                     </div>
                 </div>
             </div>
@@ -120,6 +123,9 @@ $row = $stmt->fetch();
                     <input class="input-style" type="text" placeholder="Titel" name="titel">
                 </div>
                 <div class="input-container">
+                    <input class="input-style" type="number" placeholder="Personen" name="personen">
+                </div>
+                <div class="input-container">
                     <input class="input-style" type="text" name="kleinebeschrijving" placeholder="Kleine beschrijving" required>
                 </div>
                 <div class="input-container">
@@ -139,4 +145,5 @@ $row = $stmt->fetch();
 
 </body>
 <script src="../js/adminhome.js"></script>
+<script src="https://kit.fontawesome.com/385f3b2853.js" crossorigin="anonymous"></script>
 </html>

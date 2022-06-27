@@ -2,6 +2,8 @@
 include("includes/sessions.php");
 include("includes/connect.php");
 include("php/contactshow.php");
+include("php/showvakantieuser.php");
+include("php/reviewshowuser.php");
 
 global $conn;
 
@@ -51,30 +53,54 @@ $row = $stmt->fetch();
             <hr>
             <div class="content">
                 <div class="vakantie-content" id="vakantie-c">
-                 
+                    <?php showVakantie("SELECT * FROM bookingen WHERE userID = '".$row['accountID']."'"); ?>
                 </div>
                 <div class="reviews-content" id="reviews-c">
                     <div class="reviews-button-place">
-                        <button class="button-review">+ Create Review</button>
+                        <button id="button-review-create" class="button-review">+ Create Review</button>
+                    </div>
+                    <div class="content-review">
+                        <?php showReview("SELECT * FROM recensie WHERE userID = '".$row['accountID']."'"); ?>
                     </div>
                 </div>
                 <div class="contact-content" id="contact-c">
                     <div class="contact-info">
-                        <?php showContact("SELECT * FROM contact WHERE email = '$email' ORDER BY contactID ASC", "includes/connect.php"); ?>
+                        <?php showContact("SELECT * FROM contact WHERE email = '$email' ORDER BY contactID ASC", "includes/connect.php", 1); ?>
                     </div>
                 </div>
             </div>
         </main>
     </section>
 
-    <!-- <section class="review-add-plek">
-        <div class="review-div">
-
+    <section id="review-section" class="review-add-plek">
+        <div class="review-div" id="review-div">
+            <div class="review-titel">
+                <h2 class="titel">Maak review</h2>
+            </div>
+            <form action=<?php print_r("php/createreview.php?ID=".$row['accountID']); ?> method="POST" class="form">
+                <div class="input-plek">
+                    <input class="input" placeholder="Reis Titel" type="text" name="land-titel" required>
+                </div>
+                <div class="input-plek">
+                    <input class="input" placeholder="Review Titel" type="text" name="review-titel" required>
+                </div>
+                <div class="input-plek">
+                    <input class="input" placeholder="Beschrijving" type="text" name="Beschrijving" required>
+                </div>
+                <div class="input-plek">
+                    <input class="input" placeholder="Sterren" type="number" name="Sterren" required>
+                </div>
+                <div class="input-plek">
+                    <input class="button" value="Verzenden" type="submit" name="submit">
+                </div>
+                <input value=<?php print_r($row['accountID']); ?> name="hidden" type="hidden">
+            </form>
         </div>
-    </section> -->
+    </section>
 
     <?php include("includes/footer.php"); ?>
 
 </body>
 <script src="js/userprofiles.js"></script>
+<script src="https://kit.fontawesome.com/385f3b2853.js" crossorigin="anonymous"></script>
 </html>

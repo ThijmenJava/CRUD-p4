@@ -1,6 +1,6 @@
 <?php
 
-function showContact($query, $path) {
+function showContact($query, $path, $nummer) {
     include($path);
     global $conn;
     $stmt = $conn->prepare($query);
@@ -15,7 +15,11 @@ function showContact($query, $path) {
                 echo "<div class='send-by center'>Email: {$value["email"]}</div>";
                 echo "<div class='send-by center'>Onderwerp: {$value["onderwerp"]}</div>";
                 echo "<div class='textarea-plek'><textarea readonly class='textarea-content'>{$value["bericht"]}</textarea></div>";
-                echo "<div class='button-plek'><a class='a-tag-container' href='../php/deletecontact.php?ID={$value["contactID"]}'><button class='button-style'>Delete</button></a></div>";
+                if($nummer == 0) {
+                    echo "<div class='button-plek'><a class='a-tag-container' href='../php/deletecontact.php?ID={$value["contactID"]}'><button class='button-style'>Delete</button></a></div>";
+                } else {
+                    echo "<div class='button-plek'><a class='a-tag-container' href='php/deletecontactuser.php?ID={$value["contactID"]}'><button class='button-style'>Delete</button></a></div>";
+                }
             echo "</div>";
         }
     } else {

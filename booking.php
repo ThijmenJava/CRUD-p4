@@ -20,7 +20,7 @@ include("php/vakantiebackendshow.php");
         <section class="booking-section">
             <div class="content-booking">
                 <div class="form-plek">
-                    <form method="POST" action="php/vkantiebackendshow.php" class="form-block">
+                    <form method="POST" class="form-block">
                         <div class="input-plek">
                             <div class="label-plek">
                                 <h5 class="font-label">Bestemming</h5>
@@ -34,19 +34,7 @@ include("php/vakantiebackendshow.php");
                                 <h5 class="font-label">Prijs</h5>
                             </div>
                             <div class="input">
-                                <input class="input-veld" type="number" name="prijs" placeholder="Prijs">
-                            </div>
-                        </div>
-                        <div class="input-plek">
-                            <div class="label-plek">
-                                <h5 class="font-label">Sterren</h5>
-                            </div>
-                            <div class="input">
-                                <input id="optie" type="radio" class="optie" name="check" onclick="onlyOne(this)">1</input>
-                                <input id="optie" type="radio" class="optie" name="check" onclick="onlyOne(this)">2</input>
-                                <input id="optie" type="radio" class="optie" name="check" onclick="onlyOne(this)">3</input>
-                                <input id="optie" type="radio" class="optie" name="check" onclick="onlyOne(this)">4</input>
-                                <input id="optie" type="radio" class="optie" name="check" onclick="onlyOne(this)">5</input>
+                                <input class="input-veld" type="number" name="personen" placeholder="Personen">
                             </div>
                         </div>
                         <div class="input-plek">
@@ -62,7 +50,7 @@ include("php/vakantiebackendshow.php");
                                 <h5 class="font-label">Einddatum</h5>
                             </div>
                             <div class="input">
-                                <input class="input-veld" type="date" name="datum" placeholder="Einddatum">
+                                <input class="input-veld" type="date" name="datum2" placeholder="Einddatum">
                             </div>
                         </div>
                         <div class="input-plek">

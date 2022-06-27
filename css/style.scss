@@ -445,8 +445,8 @@ header {
           .foto {
             width: 100%;
             height: 100%;
-            border-top-left-radius: 25px;
-            border-bottom-left-radius: 25px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
           }
         }
         .blok-2 {
@@ -504,9 +504,8 @@ header {
       @include block(100%, 30%, transparent);
       padding-top: 80px;
       .form-block {
-        position: fixed;
         width: 300px;
-        height: 430px;
+        height: 360px;
         background-color: $background-one;
         border-radius: 25px;
         padding-top: 25px;
@@ -560,6 +559,20 @@ header {
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .booking-section {
+    .content-booking {
+      flex-direction: column;
+      .booking-plek {
+        width: 100%;
+      }
+      .form-plek {
+        width: 100%;
       }
     }
   }
@@ -1220,9 +1233,10 @@ header {
       display: flex;
       flex: 1;
       .vakantie-content {
-        display: block;
+        display: flex;
         @include block(100%, 100%, transparent);
         flex: 1;
+        flex-wrap: wrap;
         .vakantie-button-place {
           @include block(50px, 100%, transparent);
           @include center();
@@ -1244,13 +1258,25 @@ header {
       }
       .geboekte-content {
         display: none;
-        @include block(100%, 100%, red);
+        @include block(100%, 100%, transparent);
         flex: 1;
+        .content-booking {
+          display: flex;
+          @include block(100%, 100%, transparent);
+          flex: 1;
+          flex-wrap: wrap;
+        }
       }
       .reviews-content {
         display: none;
         @include block(100%, 100%, transparent);
         flex: 1;
+        .content-review {
+          display: flex;
+          @include block(100%, 100%, transparent);
+          flex: 1;
+          flex-wrap: wrap;
+        }
         .reviews-button-place {
           @include block(50px, 100%, transparent);
           @include center();
@@ -1310,6 +1336,12 @@ header {
   }
 }
 
+@media only screen and (max-width: 625px) {
+  .content-review {
+    @include center();
+  }
+}
+
 .create-section {
   @include block(100%, 100%, transparent);
   display: none;
@@ -1320,7 +1352,7 @@ header {
   left: 0;
   background-color: rgba(14, 14, 14, 0.8);
   .create-form-plek {
-    @include block(560px, 400px, white);
+    @include block(610px, 400px, white);
     display: none;
     flex-wrap: wrap;
     border-radius: 20px;
@@ -1362,6 +1394,57 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  background-color: rgba(14, 14, 14, 0.8);
+  .review-div {
+    display: none;
+    width: 350px;
+    height: 360px;
+    background-color: white;
+    border-radius: 25px;
+    .review-titel {
+      @include center();
+      width: 100%;
+      height: 50px;
+      .titel {
+        font-size: 25px;
+      }
+    }
+    .form {
+      width: 100%;
+      height: 300px;
+      .input-plek {
+        @include center();
+        width: 100%;
+        height: 60px;
+        .input {
+          border: none;
+          background: none;
+          background-color: white;
+          height: 35px;
+          width: 70%;
+          border: 1px solid #9fb4ff;
+          border-radius: 25px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        .button {
+          width: 70%;
+          height: 40px;
+          font-size: 18px;
+          border: none;
+          border-radius: 25px;
+          background-color: white;
+          -webkit-transition-duration: 0.4s;
+          transition-duration: 0.2s;
+          border: 1px solid #9fb4ff;
+          cursor: pointer;
+          &:hover {
+            background-color: $second-color;
+          }
+        }
+      }
+    }
+  }
 }
 
 .contact-blok {
@@ -1805,6 +1888,28 @@ header {
     .blok-info {
       height: 80vh;
       width: 50%;
+      .sammenvatting {
+        width: 100%;
+        height: auto;
+        .titel-plek {
+          @include center();
+          height: 70px;
+          width: 100%;
+          .titel-font {
+            font-size: 30px;
+          }
+        }
+        .beschrijving-plek {
+          width: 100%;
+          height: auto;
+          margin-bottom: 20px;
+        }
+        .grote-beschrijving {
+          width: 100%;
+          height: auto;
+          margin-top: 20px;
+        }
+      }
     }
     .blok-boeken {
       height: 80vh;
@@ -1885,10 +1990,318 @@ header {
         }
       }
       .review-plek {
+        @include center();
         width: 100%;
         height: 40vh;
-        background-color: blue;
+        .review-blok {
+          width: 80%;
+          height: 80%;
+          border: 2px solid lightgray;
+          border-radius: 5px;
+          overflow: scroll;
+          .review {
+            width: 100%;
+            height: 150px;
+            background-color: white;
+            border-bottom: 1px solid lightgray;
+            .from-plek {
+              @include center();
+              width: 100%;
+              height: 20px;
+            }
+            .titel-reis-plek {
+              @include center();
+              width: 100%;
+              height: 30px;
+              .font-titel {
+                color: lightgray;
+                font-size: 15px;
+              }
+            }
+            .beschrijving-plek {
+              width: 100%;
+              height: 70px;
+              padding: 10px;
+            }
+            .sterren-plek {
+              @include center();
+              height: 30px;
+              width: 100%;
+              .test {
+                color: green;
+              }
+            }
+          }
+        }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .vakantieinfo-section {
+    height: auto;
+    flex-direction: column;
+    .blok1 {
+      width: 100%;
+    }
+    .blok2 {
+      @include center();
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+      .blok-info {
+        width: 80%;
+        height: auto;
+      }
+      .blok-boeken {
+        width: 70%;
+      }
+    }
+  }
+}
+
+.section-boek {
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  background-image: url(../img/imgboeken.jpg);
+  background-size: cover;
+  .big-info {
+    @include center();
+    width: 100%;
+    height: 80vh;
+    .center-info {
+      width: 350px;
+      height: 400px;
+      background-color: $background-one;
+      border-radius: 20px;
+      .titel-plek {
+        @include center();
+        width: 100%;
+        height: 60px;
+        .titel {
+          font-size: 30px;
+        }
+      }
+      .input-titel-plek {
+        @include center();
+        width: 100%;
+        height: 40px;
+        .titel-font {
+          font-size: 23px;
+        }
+      }
+      .input-plek {
+        @include center();
+        width: 100%;
+        height: 40px;
+        .input {
+          border: none;
+          background: none;
+          background-color: rgba(0, 0, 0, 0);
+          background-color: white;
+          height: 30px;
+          width: 70%;
+          border: 1px solid #9fb4ff;
+          border-radius: 25px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        .submit-button {
+          @include remove_input_style();
+          border: 1px solid $seventh-color;
+          border-radius: 25px;
+          background-color: white;
+          width: 200px;
+          height: 35px;
+          transition-duration: 0.2s;
+          cursor: pointer;
+          &:hover {
+            background-color: $second-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.div-show-vakantie {
+  display: flex;
+  width: 330px;
+  height: 200px;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  .image-div {
+    width: 40%;
+    height: 100%;
+    .img {
+      width: 100%;
+      height: 100%;
+      border-bottom-left-radius: 17px;
+      border-top-left-radius: 17px;
+    }
+  }
+  .info-plek {
+    width: 60%;
+    height: 100%;
+    .titel-plek {
+      @include center();
+      width: 100%;
+      height: 30px;
+    }
+    .land-plek {
+      @include center();
+      width: 100%;
+      height: 15px;
+      .land-titel {
+        color: lightgray;
+        font-size: 15px;
+      }
+    }
+    .beschrijving-plek {
+      width: 100%;
+      height: 115px;
+      padding: 10px;
+      .font {
+        font-size: 14px;
+      }
+    }
+    .button-plek {
+      @include center();
+      width: 100%;
+      height: 35px;
+      .button {
+        @include remove_input_style();
+        width: 120px;
+        height: 30px;
+        background-color: $background-one;
+        border: 1px solid black;
+        border-radius: 25px;
+        transition-duration: 0.2s;
+        &:hover {
+          background-color: #9fb4ff;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .vakantie-content {
+    @include center();
+  }
+}
+
+.div-review {
+  height: 210px;
+  width: 300px;
+  margin: 10px;
+  border-radius: 20px;
+  border: 2px solid black;
+  .pending-plek {
+    @include center();
+    width: 100%;
+    height: 35px;
+    .font-black {
+      color: black;
+      font-size: 25px;
+    }
+    .font {
+      color: red;
+      font-size: 25px;
+    }
+    .font-done {
+      font-size: 20px;
+      color: lightgreen;
+    }
+  }
+  .titel-plek {
+    @include center();
+    width: 100%;
+    height: 35px;
+    .font {
+      font-size: 20px;
+      color: lightgray;
+    }
+  }
+  .text-blok {
+    width: 100%;
+    height: 80px;
+    .text-blok {
+      width: 100%;
+      height: 100%;
+      resize: none;
+    }
+  }
+  .sterren-plek {
+    @include center();
+    width: 100%;
+    height: 20px;
+  }
+  .button-plek {
+    @include center();
+    width: 100%;
+    height: 30px;
+    .button {
+      @include remove_input_style();
+      width: 150px;
+      height: 25px;
+      background-color: $background-one;
+      border: 1px solid black;
+      border-radius: 20px;
+      transition-duration: 0.2s;
+      &:hover {
+        background-color: #9fb4ff;
+      }
+    }
+  }
+}
+
+.review-content-back {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.submit-plek {
+  @include center();
+  width: 50%;
+  height: 100%;
+  .submit {
+    @include remove_input_style();
+    width: 100px;
+    height: 30px;
+    background-color: $background-one;
+    border: 2px solid black;
+    border-radius: 20px;
+  }
+}
+
+.blok-4 {
+  height: 100px;
+  width: 300px;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  .titel-plek {
+    @include center();
+    width: 100%;
+    height: 30px;
+  }
+  .button-plek {
+    @include center();
+    width: 100%;
+    height: 30px;
+    .button {
+      width: 100px;
+      height: 25px;
+      background-color: $background-one;
+      border: 1px solid black;
+      border-radius: 20px;
     }
   }
 }

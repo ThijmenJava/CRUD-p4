@@ -2,6 +2,7 @@
 
 include("includes/connect.php");
 include("includes/util.php");
+include("php/reviewshow.php");
 
 global $conn;
 
@@ -45,7 +46,16 @@ $row = $stmt->fetch();
         </div>
         <div class="blok2">
             <div class="blok-info">
-
+                <div class="sammenvatting">
+                    <div class="titel-plek"><h3 class="titel-font"><?php print_r($row['titel']); ?></h3></div>
+                    <div class="beschrijving-plek">
+                        <h4><?php print_r($row['kleinebeschrijving']); ?></h4>
+                    </div>
+                    <hr>
+                    <div class="grote-beschrijving">
+                        <h4><?php print_r($row['beschrijving']); ?></h4>
+                    </div>
+                </div>
             </div>
             <div class="blok-boeken">
                 <div class="boek-plek">
@@ -80,7 +90,9 @@ $row = $stmt->fetch();
                     </div>
                 </div>
                 <div class="review-plek">
-
+                    <div class="review-blok">
+                        <?php showreview("SELECT * FROM recensie WHERE reisID = '".$_GET['ID']."'"); ?>
+                    </div>
                 </div>
             </div>
         </div>

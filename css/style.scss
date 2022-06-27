@@ -173,14 +173,12 @@ header {
         list-style-type: none;
         padding-left: 25px;
         padding-right: 25px;
-        // width: 145px;
         a {
           text-decoration: none;
           margin: 2px;
           font-size: 20px;
           width: 175px;
           height: 50px;
-          // padding: 8px;
           position: relative;
           text-align: center;
           transition-duration: 0.2s;
@@ -239,13 +237,6 @@ header {
             width: 100px;
           }
         }
-        @media only screen and (max-width: 400px) {
-          a {
-            margin: 1px;
-            font-size: 10px;
-            width: 75px;
-          }
-        }
       }
       @media only screen and (max-width: 900px) {
         li {
@@ -265,22 +256,10 @@ header {
           padding-right: 6px;
         }
       }
-      @media only screen and (max-width: 610px) {
+      @media only screen and (max-width: 600px) {
         li {
           padding-left: 2px;
           padding-right: 2px;
-        }
-      }
-      @media only screen and (max-width: 500px) {
-        li {
-          padding-left: 1px;
-          padding-right: 1px;
-        }
-      }
-      @media only screen and (max-width: 400px) {
-        li {
-          padding-left: 0px;
-          padding-right: 0px;
         }
       }
     }
@@ -376,6 +355,41 @@ header {
     .ttt-titel {
       color: $second-color;
       margin-left: 10px;
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    .welkom {
+      height: 700px;
+      font-size: 60px;
+      margin-bottom: 80px;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .welkom {
+      height: 650px;
+      font-size: 50px;
+      margin-bottom: 60px;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .welkom {
+      height: 600px;
+      font-size: 35px;
+      margin-bottom: 40px;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .welkom {
+      height: 550px;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .welkom {
+      height: 500px;
+      font-size: 20px;
+      margin-bottom: 0px;
     }
   }
   .content-container {
@@ -1683,6 +1697,12 @@ header {
       }
     }
   }
+}
+
+a {
+  list-style-type: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 .sectionfooter {

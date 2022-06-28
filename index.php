@@ -15,6 +15,7 @@
     <body>
     <?php include("includes/header.php") ?>
         <div class="main-section">
+            <div class="welkom"><h1 class="welkom-titel">Welkom bij</h1><h1 class=ttt-titel>Time To Travel</h1></div>
             <div class="content-container">
                 <div class="slideShow" id="slideshow">
                     <div class="zoekbalk">

@@ -26,12 +26,12 @@
                                 <label class="container" for="name"><p>Bestemming</p></label>
                                 <input class="zoek-input" type="text" placeholder="Land..." name="name" required>
                                 <label class="container" for="person"><p>Aantal personen</p></label>
-                                <input class="zoek-input" type="number" placeholder="Aantal personen..." name="personen" required>
+                                <input class="zoek-input" min="0" type="number" placeholder="Aantal personen..." name="personen" required>
                                 <label class="container" for="date"><p>Begindatum</p></label>
                                 <input class="zoek-input" type="date" placeholder="" name="begindatum" required>
                                 <label class="container" for="date"><p>Einddatum</p></label>
                                 <input class="zoek-input" type="date" placeholder="" name="einddatum" required>
-                                <input class="submit-button" type="submit" name="verzenden"></input>
+                                <input class="submit-button" value="Verzenden" type="submit" name="verzenden"></input>
                             </div>
                         </form>
                     </div>

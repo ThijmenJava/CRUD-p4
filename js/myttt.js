@@ -14,3 +14,11 @@ signupButton.addEventListener("click", (event) => {
   divsignup.style.display = "block";
   divlogin.style.display = "none";
 });
+
+function validateForm() {
+  let x = document.forms["form"]["wachtwoord"].value;
+  if (x == "") {
+    alert("vul eerst je Wachtwoord in om verder te gaan!");
+    return false;
+  }
+}

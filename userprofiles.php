@@ -5,6 +5,10 @@ include("php/contactshow.php");
 include("php/showvakantieuser.php");
 include("php/reviewshowuser.php");
 
+if(isset($_POST['uitloggen'])) {
+    session_destroy();
+}
+
 global $conn;
 
 $email = $_SESSION['email'];
@@ -14,6 +18,7 @@ $stmt = $conn->prepare($qeury);
 $stmt->bindParam(":email", $email);
 $stmt->execute();
 $row = $stmt->fetch();
+
 
 ?>
 <!DOCTYPE html>
@@ -38,7 +43,11 @@ $row = $stmt->fetch();
                 <img class="profile-image" src=<?php print_r($row['image']) ?> alt="">
             </div>
             <div class="profile-items-plek">
-
+                <div class="uitlog-button">
+                    <form class="button-plek" method="POST" action="">
+                        <input class="uitloggen" type="submit" value="uitloggen" name="uitloggen">
+                    </form>
+                </div>
             </div>
         </div>
     </section>

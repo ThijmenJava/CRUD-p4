@@ -28,16 +28,16 @@
               </div>
               <hr>
               <div id="loginform" action="php/login.php" method="post" class="form-container">
-                <form action="php/login.php" method="POST">
+                <form action="php/login.php" onsubmit="return validateForm()" method="POST" name="form">
                   <div class="login-container" id="logindiv">
                     <div class="titel"><h2>Login</h2></div>
                     <div class="label-input"><h3>E-mailadres</h3></div>
                     <div class="input-plek"><input class="input" type="email" name="email" required></div>
                     <div class="label-input margin"><h3>Wachtwoord</h3></div>
-                    <div class="input-plek"><input class="input" type="password" name="wachtwoord" required></div>
+                    <div class="input-plek"><input class="input" type="password" name="wachtwoord"></div>
                     <a href="contact.php">Wachtwoord vergeten</a>
                     <div class="label-input margin"></div>
-                    <div class="input-plek"><input class="login-input" type="submit" value="Inloggen" name="submit" required></div>
+                    <div class="input-plek"><input class="login-input" type="submit" value="Inloggen" name="submit"></div>
                   </div>
                 </form>
                 <form action="php/signup.php" method="POST">
@@ -49,6 +49,7 @@
                     <div class="input-plek"><input class="input" type="text" name="naam" required></div>
                     <div class="label-input margin"><h3>Wachtwoord</h3></div>
                     <div class="input-plek"><input class="input" type="password" name="wachtwoord" required></div>
+                    <a href="https://www.niab.nl/nieuwesite/privacy-policy/">Privacy Policy</a>
                     <div class="label-input margin"></div>
                     <div class="input-plek"><input class="signup-input" type="submit" value="SignUp" name="submit-signup"></div>  
                   </div>

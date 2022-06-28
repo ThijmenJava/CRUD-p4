@@ -1,28 +1,18 @@
 <?php
 
 include("includes/connect.php");
-include("includes/util.php");
+include("includes/util.php");    
 
-if(empty($_GET['BES']) || empty($_GET['PER']) || empty($_GET['BEGIN']) || empty($_GET['EIND'])) {
+if(empty($_GET['BES']) || !empty($_GET['PER']) || empty($_GET['BEGIN']) || empty($_GET['EIND'])) {
     $query = "SELECT * FROM reizen ORDER BY reisID ASC";
 } else {
-    $bestemming = $_GET['BES'];
-    $personen = $_GET['PER'];
-    $begin = $_GET['BEGIN'];
-    $eind = $_GET["EIND"];
-    $query = "SELECT * FROM reizen WHERE land LIKE :land AND personen < :per AND startdatum = :begin AND einddatum = :eind";
-    $stmt = $conn->prepare($query);
-    $stmt->bindParam(":land", $bestemming);
-    $stmt->bindParam(":land", $bestemming);
-    $stmt->bindParam(":land", $bestemming);
-    $stmt->bindParam(":land", $bestemming);
-
+    $query = "SELECT * FROM reizen WHERE land = '".$_GET['BES']."' AND personen = {$_GET['PER']} AND startdatum > '".$_GET['BEGIN']."' AND einddatum < '".$_GET['EIND']."'";
 }
 
 if(isset($_POST['submit'])) {
-
+    $query = "SELECT * FROM reizen WHERE land = '".$_POST['land']."' AND personen = {$_POST['personen']} AND startdatum > '".$_POST['datum']."' AND einddatum < '".$_POST['datum2']."'";
 } else {
-    
+
 }
 
 function showVakantie() {
@@ -32,7 +22,7 @@ function showVakantie() {
     $stmt->execute();
     if(!empty($stmt)) {
         foreach($stmt as $value) {
-          echo "<div class='vakantie-plek'>";
+          echo "<div class='vakantie-plek margin'>";
             echo "<div class='blok-1'>";
                 echo "<img class='foto' src='{$value['image']}' alt=''>";
             echo "</div>";

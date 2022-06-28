@@ -35,6 +35,7 @@
                     <div class="input-plek"><input class="input" type="email" name="email" required></div>
                     <div class="label-input margin"><h3>Wachtwoord</h3></div>
                     <div class="input-plek"><input class="input" type="password" name="wachtwoord" required></div>
+                    <a href="contact.php">Wachtwoord vergeten</a>
                     <div class="label-input margin"></div>
                     <div class="input-plek"><input class="login-input" type="submit" value="Inloggen" name="submit" required></div>
                   </div>

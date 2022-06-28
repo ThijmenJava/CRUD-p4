@@ -16,14 +16,15 @@ if(isset($_POST["submit"])) {
     $image = $_FILES['file'];
     move_uploaded_file($image['tmp_name'], "../img/vakantieimg/".$image['name']);
 
-    $query = "INSERT INTO reizen(land, startdatum, einddatum, kosten, titel, kleinebeschrijving, beschrijving, image) 
-    VALUES (:land, :startdatum, :einddatum, :kosten, :titel, :kleinebeschrijving, :beschrijving, 'img/vakantieimg/{$image['name']}')";
+    $query = "INSERT INTO reizen(land, startdatum, einddatum, kosten, titel, personen, kleinebeschrijving, beschrijving, image) 
+    VALUES (:land, :startdatum, :einddatum, :kosten, :titel, :personen, :kleinebeschrijving, :beschrijving, 'img/vakantieimg/{$image['name']}')";
     $stmt = $conn->prepare($query);
     $stmt->bindParam(":land", $land);
     $stmt->bindParam(":startdatum", $startdatum);
     $stmt->bindParam(":einddatum", $einddatum);
     $stmt->bindParam(":kosten", $prijs);
     $stmt->bindParam(":titel", $titel);
+    $stmt->bindParam(":personen", $_POST['personen']);
     $stmt->bindParam(":kleinebeschrijving", $kleinebeschrijving);
     $stmt->bindParam(":beschrijving", $beschrijving);
     $stmt->execute();

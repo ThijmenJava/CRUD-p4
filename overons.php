@@ -39,7 +39,7 @@
                                 <div class="neem-contact-op">
                                     <h3 class="contact-titel">Wil je contact met ons opnemen?</h3>
                                     <p>Neem contact met ons op hieronder</p>
-                                    <button class="contact-button">Contact</button>
+                                    <a href="contact.php"><button class="contact-button">Contact</button></a>
                                 </div>
                         </div>
                     </div>

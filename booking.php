@@ -54,6 +54,22 @@ include("php/vakantiebackendshow.php");
                             </div>
                         </div>
                         <div class="input-plek">
+                            <div class="label-plek">
+                                <h5 class="font-label">Startdatum</h5>
+                            </div>
+                            <div class="input">
+                                <input class="input-veld" type="date" name="datum" placeholder="Startdatum">
+                            </div>
+                        </div>
+                        <div class="input-plek">
+                            <div class="label-plek">
+                                <h5 class="font-label">Einddatum</h5>
+                            </div>
+                            <div class="input">
+                                <input class="input-veld" type="date" name="datum" placeholder="Einddatum">
+                            </div>
+                        </div>
+                        <div class="input-plek">
                             <input class="booking-input" type="submit" name="submit" value="Zoek">
                         </div>
                     </form>

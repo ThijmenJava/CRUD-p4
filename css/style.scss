@@ -1220,6 +1220,27 @@ header {
       display: flex;
       height: 100%;
       width: 70%;
+      .uitlog-button {
+        width: 100%;
+        height: 80px;
+        .button-plek {
+          margin: 30px;
+          display: flex;
+          justify-content: right;
+          .uitloggen {
+            @include remove_input_style();
+            background-color: $background-one;
+            border: 2px solid black;
+            width: 140px;
+            height: 40px;
+            border-radius: 20px;
+            transition-duration: 0.2s;
+            &:hover {
+              background-color: #9fb4ff;
+            }
+          }
+        }
+      }
       .profile-info-plek {
         @include center();
         height: 100%;
@@ -1969,8 +1990,9 @@ a {
         height: 40vh;
         .boek-blok {
           width: 80%;
-          height: 35vh;
+          height: auto;
           border: 2px solid lightgray;
+          margin-top: 10px;
           border-radius: 5px;
           .kosten-plek {
             display: flex;

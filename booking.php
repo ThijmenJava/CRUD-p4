@@ -31,7 +31,7 @@ include("php/vakantiebackendshow.php");
                         </div>
                         <div class="input-plek">
                             <div class="label-plek">
-                                <h5 class="font-label">Prijs</h5>
+                                <h5 class="font-label">Personen</h5>
                             </div>
                             <div class="input">
                                 <input class="input-veld" type="number" name="personen" placeholder="Personen">
